@@ -1,5 +1,7 @@
-function HomePage() {
-  return <h1>سلام دارم فونت رو تست میکنم</h1>;
+import HomePage from "@/components/home/HomePage";
+
+function Home() {
+  return <HomePage />;
 }
 
-export default HomePage;
+export default Home;

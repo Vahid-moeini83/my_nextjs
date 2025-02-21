@@ -1,12 +1,28 @@
-/* :root {
-  colors define here
-} */
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+:root {
+  /* colors */
+  --dark-color: #000;
+  --light-color: #fff;
+  --purple-color: #9914f2;
+  --orange-color: #fc5732;
+  --danger-color: #db1215;
+  --dark-background: #23252e;
+  --light-background: #414558;
+  --light-border: #868686;
+
+  /* container */
+  --container-width-lg: 2464px;
+  --container-padding-lg: 0 48px;
+}
 
 html,
 body {
   max-width: 100vw;
+  height: 100dvh;
   overflow-x: hidden;
-  font-family: var(--font-textFont);
+  font-family: "Albert Sans", sans-serif;
+  user-select: none;
 }
 
 * {
@@ -22,4 +38,9 @@ ul {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.container {
+  max-width: var(--container-width-lg);
+  padding: var(--container-padding-lg);
 }

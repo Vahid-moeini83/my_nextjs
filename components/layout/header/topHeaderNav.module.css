@@ -1,0 +1,11 @@
+.nav ul {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+@media only screen and (max-width: 1150px) {
+  .nav ul {
+    gap: 20px;
+  }
+}

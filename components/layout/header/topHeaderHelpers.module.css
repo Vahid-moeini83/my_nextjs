@@ -1,0 +1,72 @@
+.helpers {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 24px;
+}
+
+.helpers > span > span {
+  text-decoration: underline;
+}
+
+.helpers div span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  cursor: pointer;
+}
+
+.select {
+  position: relative;
+}
+
+.dropdown {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 36px;
+  right: 0;
+  padding: 16px;
+  color: var(--light-color);
+  background-color: var(--dark-background);
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.language {
+  width: 200px;
+}
+
+.dropdown > span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: var(--dark-background);
+  rotate: 45deg;
+  position: absolute;
+  right: 24px;
+  top: -5px;
+}
+
+.dropdown li {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s;
+}
+
+@media only screen and (max-width: 1150px) {
+  .helpers {
+    display: none;
+  }
+}

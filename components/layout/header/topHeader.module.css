@@ -1,0 +1,23 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 0;
+}
+
+@media only screen and (min-width: 1150px) and (max-width: 1265px) {
+  .header {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+}
