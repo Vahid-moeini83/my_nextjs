@@ -1,0 +1,23 @@
+.bag {
+  position: relative;
+}
+
+.bag > a > span {
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--rounded-full);
+  background-color: var(--purple-color);
+}
+
+@media only screen and (min-width: 1150px) {
+  .icon:hover {
+    color: var(--purple-color);
+  }
+}

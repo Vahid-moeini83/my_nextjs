@@ -1,10 +1,9 @@
-// Components
-import MainHeader from "./MainHeader";
-import TopHeader from "./TopHeader";
+import MainHeader from "./main-header/MainHeader";
+import TopHeader from "./top-header/TopHeader";
 
 function Header() {
   return (
-    <header className="container">
+    <header>
       <TopHeader />
       <MainHeader />
     </header>

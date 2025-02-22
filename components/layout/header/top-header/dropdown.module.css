@@ -1,0 +1,17 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.arrow {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  right: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: var(--light-color);
+  rotate: 45deg;
+}

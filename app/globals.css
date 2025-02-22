@@ -11,9 +11,22 @@
   --light-background: #414558;
   --light-border: #868686;
 
-  /* container */
+  /* container lg */
   --container-width-lg: 2464px;
   --container-padding-lg: 0 48px;
+
+  /* container md */
+  --container-width-md: 1150px;
+  --container-padding-md: 0 14px;
+
+  /* container sm */
+  --container-width-sm: 640px;
+  --container-padding-sm: 0 8px;
+
+  /* border radius */
+  --rounded-full: 50%;
+  --rounded-md: 64px;
+  --rounded-sm: 20px;
 }
 
 html,
@@ -40,7 +53,27 @@ a {
   text-decoration: none;
 }
 
+input,
+select {
+  border: none;
+  outline: none;
+}
+
 .container {
   max-width: var(--container-width-lg);
   padding: var(--container-padding-lg);
+}
+
+@media only screen and (min-width: 640px) and (max-width: 1150px) {
+  .container {
+    max-width: var(--container-width-md);
+    padding: var(--container-padding-md);
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .container {
+    max-width: var(--container-width-sm);
+    padding: var(--container-padding-sm);
+  }
 }

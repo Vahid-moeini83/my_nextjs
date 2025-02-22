@@ -1,0 +1,32 @@
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-weight: 500;
+  gap: 12px;
+}
+
+.links ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.links ul li a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.links > span {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100%;
+  opacity: 0.6;
+  background-color: var(--light-background);
+}
+
+.links ul li:hover {
+  color: var(--purple-color);
+}

@@ -1,0 +1,30 @@
+.search {
+  position: relative;
+}
+
+.search input {
+  padding: 12px;
+  width: 100%;
+  border-radius: var(--rounded-md);
+}
+
+.search > div > span {
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+}
+
+.submit {
+  top: 2px;
+  right: 4px;
+  width: 54px;
+  height: 36px;
+  padding: 4px 8px;
+  border-radius: var(--rounded-md);
+  background-color: var(--dark-background);
+}
+
+.close {
+  top: 8px;
+  right: 68px;
+}

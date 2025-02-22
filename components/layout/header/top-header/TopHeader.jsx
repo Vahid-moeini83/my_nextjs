@@ -8,7 +8,7 @@ import classes from "./topHeader.module.css";
 
 function TopHeader() {
   return (
-    <div className={classes.header}>
+    <div className={`container ${classes.header}`}>
       <TopHeaderNav />
       <TopHeaderSuggestions />
       <TopHeaderHelpers />

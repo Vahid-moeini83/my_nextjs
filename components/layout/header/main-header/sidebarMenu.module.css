@@ -1,0 +1,19 @@
+.sidebar {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 320px;
+  padding: 12px;
+  overflow-y: auto;
+  transition: all 0.4s;
+  background-color: var(--light-color);
+}
+
+.close {
+  left: -320px;
+}
+
+.open {
+  left: 0;
+}
