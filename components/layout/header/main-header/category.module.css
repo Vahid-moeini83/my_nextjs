@@ -1,0 +1,90 @@
+.category {
+  position: relative;
+}
+
+.category button {
+  border: none;
+  outline: none;
+  width: 232px;
+  font-size: 16px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 60px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  transition-delay: 0.1s;
+  width: 360px;
+  font-size: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow-light);
+  border-radius: var(--rounded-xs);
+  background-color: var(--dark-background);
+}
+
+.category:hover .dropdown {
+  top: 48px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.list {
+  padding: 24px 22px 12px 22px;
+  background-color: var(--dark-background);
+}
+
+.list ul {
+  font-weight: 500;
+  margin-bottom: 16px;
+  gap: 16px;
+}
+
+.list ul li {
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.list ul li:hover {
+  color: var(--purple-color);
+}
+
+.list ul li:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: calc(100% - 56px);
+  height: 1px;
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  background: var(--light-background);
+}
+
+.list ul li a {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.list ul li a img {
+  padding: 2px;
+  border-radius: var(--rounded-full);
+  border: 1px solid var(--light-background);
+}
+
+.link {
+  text-align: left;
+  padding: 20px 22px;
+  background-color: var(--light-background);
+}
+
+.link a {
+  border-bottom: 1px solid var(--light-color);
+  transition: all 0.4s;
+}
+
+.dropdown div a:hover {
+  color: var(--purple-color);
+  border-bottom-color: var(--purple-color);
+}

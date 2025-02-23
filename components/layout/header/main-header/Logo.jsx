@@ -6,13 +6,7 @@ function HeaderLogo() {
   return (
     <div className={classes.logo}>
       <Link href="/">
-        <Image
-          src="/logo.svg"
-          width={120}
-          height={20}
-          objectFit="cover"
-          alt="logo of the site"
-        />
+        <Image src="/logo.svg" width={120} height={40} alt="logo of the site" />
       </Link>
     </div>
   );

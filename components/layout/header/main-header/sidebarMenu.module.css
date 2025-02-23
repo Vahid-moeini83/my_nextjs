@@ -1,17 +1,60 @@
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
   z-index: 999;
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 320px;
-  padding: 12px;
+  width: 340px;
+  padding: 20px;
   overflow-y: auto;
   transition: all 0.4s;
   background-color: var(--light-color);
 }
 
+.icon {
+  margin-bottom: 16px;
+}
+
+.sidebar button {
+  width: 112px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.help {
+  font-size: 14px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.help a {
+  display: inline-block;
+  color: var(--dark-color);
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--dark-color);
+}
+
+.help p {
+  color: var(--light-border);
+}
+
+.help span {
+  font-weight: 600;
+}
+
 .close {
-  left: -320px;
+  left: -340px;
 }
 
 .open {

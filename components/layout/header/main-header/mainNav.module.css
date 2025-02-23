@@ -1,0 +1,15 @@
+.nav ul {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 1150px) {
+  .nav ul {
+    font-size: 14px;
+    color: var(--dark-color);
+    flex-direction: column;
+    gap: 14px;
+  }
+}
