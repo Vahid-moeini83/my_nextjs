@@ -1,13 +1,57 @@
 "use client";
 
-import { Select, MenuItem } from "@mui/material";
-import { useState } from "react";
-import { countries, languages } from "@/utils/data";
 import classes from "./dropdown.module.css";
 import FlagIcon from "./FlagIcon";
+import useWindowWidth from "@/hooks/useWindowWidth";
+import { useState } from "react";
+import { Select, MenuItem } from "@mui/material";
+import { countries, languages } from "@/utils/data";
+import { IoClose } from "react-icons/io5";
 
 export default function Dropdown({ render }) {
   const [select, setSelect] = useState(render === "countryUnit" ? "usa" : "en");
+  const windowWidth = useWindowWidth();
+
+  let menuProps;
+
+  if (windowWidth > 1150) {
+    menuProps = {
+      PaperProps: {
+        sx: {
+          mt: 1.5,
+          borderRadius: 0,
+          overflow: "visible",
+        },
+      },
+    };
+  }
+  if (windowWidth > 768) {
+    menuProps = {
+      PaperProps: {
+        sx: {
+          borderRadius: 0,
+          overflow: "visible",
+        },
+      },
+      anchorOrigin: {
+        vertical: "top",
+      },
+      transformOrigin: {
+        vertical: "bottom",
+      },
+    };
+  } else {
+    menuProps = {
+      PaperProps: {
+        sx: {
+          width: "100%",
+          borderRadius: "var(--rounded-sm)",
+          overflow: "hidden",
+          zIndex: 999,
+        },
+      },
+    };
+  }
 
   function handleRenderCountry(selected) {
     if (!selected) return;
@@ -55,17 +99,11 @@ export default function Dropdown({ render }) {
         height: "20px",
         "& fieldset": { border: "none" },
       }}
-      MenuProps={{
-        PaperProps: {
-          sx: {
-            mt: 1.5,
-            borderRadius: 0,
-            overflow: "visible",
-          },
-        },
-      }}
+      MenuProps={menuProps}
     >
-      <span className={classes.arrow}></span>
+      <span className={classes.arrow}>
+        {windowWidth < 768 && <IoClose color="black" size={24} />}
+      </span>
       {render === "countryUnit" ? renderCountries() : renderLanguages()}
     </Select>
   );

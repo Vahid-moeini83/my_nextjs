@@ -1,10 +1,10 @@
-import MainNav from "./MainNav";
+import Link from "next/link";
 import classes from "./sidebarMenu.module.css";
+import MainNav from "./MainNav";
 import Button from "@/components/ui/Button";
-import { HiPlus } from "react-icons/hi2";
+import Dropdowns from "@/components/ui/Dropdowns";
 import { BiHeart, BiUser } from "react-icons/bi";
 import { IoClose, IoSearch } from "react-icons/io5";
-import Link from "next/link";
 
 function SidebarMenu({ isOpen, onClose }) {
   return (
@@ -17,45 +17,58 @@ function SidebarMenu({ isOpen, onClose }) {
         size={24}
         onClick={onClose}
       />
-      <MainNav icon={<HiPlus size={16} />} />
-      <div className={classes.buttons}>
+      <div className={classes.main}>
+        <MainNav />
+        <div className={classes.buttons}>
+          <Button
+            color="var(--light-color)"
+            background="var(--dark-background)"
+            rounded="var(--rounded-xs)"
+            to="#"
+            className={classes.btn}
+          >
+            <BiHeart color="white" size={20} />
+            Wishlist
+          </Button>
+          <Button
+            color="var(--light-color)"
+            background="var(--dark-background)"
+            rounded="var(--rounded-xs)"
+            to="#"
+            className={classes.btn}
+          >
+            <IoSearch size={20} />
+            Search
+          </Button>
+        </div>
+        <div className={classes.help}>
+          <Link href="#">Need help?</Link>
+          <p>
+            Address: 1234 Fashion Street, Suite 567,
+            <br />
+            New York, NY 10001
+            <br />
+            Email: <span>info@fashionshop.com</span>
+            <br />
+            Phone: <span>(212) 555-1234</span>
+          </p>
+        </div>
+      </div>
+      <div className={classes.footer}>
         <Button
           color="var(--light-color)"
           background="var(--dark-background)"
           rounded="var(--rounded-xs)"
+          to="#"
+          className={classes.btn}
         >
-          <BiHeart color="white" size={20} />
-          Wishlist
+          <BiUser size={24} />
+          Login
         </Button>
-        <Button
-          color="var(--light-color)"
-          background="var(--dark-background)"
-          rounded="var(--rounded-xs)"
-        >
-          <IoSearch size={20} />
-          Search
-        </Button>
+        <div className={classes.dropdowns}>
+          <Dropdowns />
+        </div>
       </div>
-      <div className={classes.help}>
-        <Link href="#">Need help?</Link>
-        <p>
-          Address: 1234 Fashion Street, Suite 567,
-          <br />
-          New York, NY 10001
-          <br />
-          Email: <span>info@fashionshop.com</span>
-          <br />
-          Phone: <span>(212) 555-1234</span>
-        </p>
-      </div>
-      <Button
-        color="var(--light-color)"
-        background="var(--dark-background)"
-        rounded="var(--rounded-xs)"
-      >
-        <BiUser size={24} />
-        Login
-      </Button>
     </div>
   );
 }

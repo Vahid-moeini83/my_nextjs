@@ -19,10 +19,28 @@ export const categories = [
 ];
 
 export const mainNavItems = [
-  "Home",
-  "Shop",
-  "Products",
-  "Pages",
-  "Blog",
-  "Buy now",
+  {
+    name: "Home",
+    subList: ["Home Fashion 1", "Home Fashion 2", "Home Fashion 3"],
+  },
+  {
+    name: "Shop",
+    subList: ["Shop 1", "Shop 2", "Shop 3"],
+  },
+  {
+    name: "Products",
+    subList: ["Product 1", "Product 2", "Product 3"],
+  },
+  {
+    name: "Pages",
+    subList: ["Page 1", "Page 2", "Page 3"],
+  },
+  {
+    name: "Blog",
+    subList: ["Blog 1", "Blog 2", "Blog 3"],
+  },
+  {
+    name: "Buy now",
+    subList: null,
+  },
 ];

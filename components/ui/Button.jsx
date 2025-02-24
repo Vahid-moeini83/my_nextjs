@@ -23,7 +23,12 @@ function Button({
     gap: 8,
   };
 
-  if (to) return <Link style={styles} className={className} href={to}></Link>;
+  if (to)
+    return (
+      <Link style={styles} className={className} href={to}>
+        {children}
+      </Link>
+    );
 
   return (
     <button style={styles} className={className ? className : undefined}>

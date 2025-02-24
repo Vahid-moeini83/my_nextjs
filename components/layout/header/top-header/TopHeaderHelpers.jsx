@@ -2,6 +2,7 @@
 
 import classes from "./topHeaderHelpers.module.css";
 import Dropdown from "./Dropdown";
+import Dropdowns from "@/components/ui/Dropdowns";
 
 function TopHeaderHelpers() {
   return (
@@ -9,8 +10,7 @@ function TopHeaderHelpers() {
       <span>
         Call Us: <span>+18001090</span>
       </span>
-      <Dropdown render="countryUnit" />
-      <Dropdown render="languages" />
+      <Dropdowns />
     </div>
   );
 }

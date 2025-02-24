@@ -7,9 +7,13 @@ function MainNav({ icon }) {
     <div className={classes.nav}>
       <ul>
         {mainNavItems.map((item) => (
-          <NavItem title={item} icon={item !== "Buy now" && icon} key={item} />
+          <NavItem
+            title={item.name}
+            icon={item.name !== "Buy now" && icon}
+            key={item.name}
+            subList={item.subList}
+          />
         ))}
-        {/* <NavItem title="Home" icon={<HiChevronDown size={16} />} /> */}
       </ul>
     </div>
   );

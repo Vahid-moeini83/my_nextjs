@@ -15,3 +15,26 @@
   background-color: var(--light-color);
   rotate: 45deg;
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1150px) {
+  .arrow {
+    top: unset;
+    bottom: -5px;
+    right: 57%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .arrow {
+    z-index: 9;
+    top: -48px;
+    width: 40px;
+    height: 40px;
+    rotate: unset;
+    content: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--rounded-full);
+  }
+}
