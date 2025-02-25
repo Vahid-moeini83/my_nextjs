@@ -11,7 +11,7 @@ function Sidebar() {
 
   return (
     <div>
-      <FaBarsStaggered onClick={handleOpenMenu} size={24} />
+      <FaBarsStaggered onClick={handleOpenMenu} size={20} />
       <SidebarMenu isOpen={isMenuOpen} onClose={handleCloseMenu} />
       {isMenuOpen &&
         createPortal(<Overlay onClose={handleCloseMenu} />, document.body)}

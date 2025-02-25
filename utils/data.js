@@ -44,3 +44,20 @@ export const mainNavItems = [
     subList: null,
   },
 ];
+
+export const footerHelpLinks = [
+  "Privacy Policy",
+  "Returns + Exchanges",
+  "Shipping & Delivery",
+  "Terms & Conditions",
+  "FAQ’s",
+  "Compare",
+  "My Wishlist",
+];
+
+export const footerAboutUsLinks = [
+  "Our Story",
+  "Visit Our Store",
+  "Contact Us",
+  "Account",
+];

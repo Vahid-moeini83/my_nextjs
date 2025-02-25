@@ -17,7 +17,7 @@ function SubNav() {
       <ul>
         <li>
           <Link href="#">
-            <IoSearchSharp onClick={handleOpenMenu} size={28} />
+            <IoSearchSharp onClick={handleOpenMenu} size={20} />
           </Link>
         </li>
         <li>

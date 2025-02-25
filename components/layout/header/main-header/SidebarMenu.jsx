@@ -2,6 +2,7 @@ import Link from "next/link";
 import classes from "./sidebarMenu.module.css";
 import MainNav from "./MainNav";
 import Button from "@/components/ui/Button";
+import ShopInfo from "@/components/ui/ShopInfo";
 import Dropdowns from "@/components/ui/Dropdowns";
 import { BiHeart, BiUser } from "react-icons/bi";
 import { IoClose, IoSearch } from "react-icons/io5";
@@ -43,15 +44,7 @@ function SidebarMenu({ isOpen, onClose }) {
         </div>
         <div className={classes.help}>
           <Link href="#">Need help?</Link>
-          <p>
-            Address: 1234 Fashion Street, Suite 567,
-            <br />
-            New York, NY 10001
-            <br />
-            Email: <span>info@fashionshop.com</span>
-            <br />
-            Phone: <span>(212) 555-1234</span>
-          </p>
+          <ShopInfo />
         </div>
       </div>
       <div className={classes.footer}>

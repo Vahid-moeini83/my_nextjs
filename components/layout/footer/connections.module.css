@@ -1,0 +1,21 @@
+.connections {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.connections a {
+  text-align: left;
+}
+
+.connections > a {
+  transition: all 0.3s;
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--light-border);
+}
+
+.connections > a:hover {
+  color: var(--purple-color);
+  border-color: var(--purple-color);
+}

@@ -1,0 +1,37 @@
+.btn {
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  z-index: 998;
+  position: fixed;
+  bottom: 100px;
+  right: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--rounded-xs);
+  box-shadow: var(--shadow-light);
+  background-color: var(--light-color);
+  transition: all 0.4s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1150px) {
+  .btn {
+    bottom: 154px;
+    right: 34px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .btn {
+    bottom: 86px;
+    right: 34px;
+  }
+}

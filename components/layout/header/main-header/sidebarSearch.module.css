@@ -3,17 +3,46 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 320px;
-  padding: 12px;
+  width: 360px;
+  padding: 12px 0;
   overflow-y: auto;
   transition: all 0.4s;
   background-color: var(--light-color);
 }
 
+.header {
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h2 {
+  color: var(--dark-color);
+  font-size: 32px;
+}
+
 .close {
-  right: -320px;
+  right: -360px;
 }
 
 .open {
   right: 0;
+}
+
+@media only screen and (max-width: 480px) {
+  .sidebar {
+    width: 300px;
+  }
+
+  .sidebar h2 {
+    font-size: 24px;
+    font-weight: 500;
+  }
 }

@@ -8,13 +8,13 @@ import { Select, MenuItem } from "@mui/material";
 import { countries, languages } from "@/utils/data";
 import { IoClose } from "react-icons/io5";
 
-export default function Dropdown({ render }) {
+export default function Dropdown({ render, place }) {
   const [select, setSelect] = useState(render === "countryUnit" ? "usa" : "en");
   const windowWidth = useWindowWidth();
 
   let menuProps;
 
-  if (windowWidth > 1150) {
+  if (windowWidth >= 1150) {
     menuProps = {
       PaperProps: {
         sx: {
@@ -25,7 +25,7 @@ export default function Dropdown({ render }) {
       },
     };
   }
-  if (windowWidth > 768) {
+  if (windowWidth >= 768 && windowWidth < 1150) {
     menuProps = {
       PaperProps: {
         sx: {
@@ -40,7 +40,8 @@ export default function Dropdown({ render }) {
         vertical: "bottom",
       },
     };
-  } else {
+  }
+  if (windowWidth < 768) {
     menuProps = {
       PaperProps: {
         sx: {
@@ -97,6 +98,13 @@ export default function Dropdown({ render }) {
         position: "relative",
         width: "100px",
         height: "20px",
+        color: `${
+          place === "footer" ? "var(--light-border)" : "var(--dark-color)"
+        }`,
+        ".MuiSelect-icon": {
+          color:
+            place === "footer" ? "var(--light-border)" : "var(--dark-color)",
+        },
         "& fieldset": { border: "none" },
       }}
       MenuProps={menuProps}

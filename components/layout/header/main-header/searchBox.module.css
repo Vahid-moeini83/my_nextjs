@@ -3,8 +3,9 @@
 }
 
 .search input {
-  padding: 12px;
   width: 100%;
+  padding: 12px 96px 12px 12px;
+  font-size: 16px;
   border-radius: var(--rounded-md);
 }
 
@@ -27,4 +28,29 @@
 .close {
   top: 8px;
   right: 68px;
+}
+
+@media only screen and (max-width: 1150px) {
+  .search {
+    padding: 0 10px;
+  }
+
+  .search input {
+    padding: 12px 36px;
+    border: 1px solid var(--light-border);
+  }
+
+  .submit {
+    top: 8px;
+    left: 10px;
+    right: unset;
+    width: unset;
+    height: unset;
+    background-color: unset;
+  }
+
+  .close {
+    top: 10px;
+    right: 16px;
+  }
 }

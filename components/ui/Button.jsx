@@ -5,7 +5,6 @@ function Button({
   background = transparent,
   rounded = 0,
   className,
-  icon,
   to,
   children,
 }) {

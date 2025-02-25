@@ -1,5 +1,5 @@
 import classes from "./responsiveHeader.module.css";
-import HeaderLogo from "./Logo";
+import Logo from "../../../ui/Logo";
 import Sidebar from "./Sidebar";
 import SubNav from "./SubNav";
 
@@ -7,7 +7,7 @@ function ResponsiveHeader() {
   return (
     <div className={`container ${classes.header}`}>
       <Sidebar />
-      <HeaderLogo />
+      <Logo />
       <SubNav />
     </div>
   );

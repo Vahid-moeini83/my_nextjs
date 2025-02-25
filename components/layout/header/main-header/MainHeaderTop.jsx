@@ -1,4 +1,4 @@
-import Logo from "./Logo";
+import Logo from "../../../ui/Logo";
 import SearchBox from "./SearchBox";
 import SubLinks from "./SubLinks";
 import classes from "./mainHeaderTop.module.css";

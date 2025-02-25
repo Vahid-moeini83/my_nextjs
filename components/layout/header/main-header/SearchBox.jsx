@@ -4,9 +4,11 @@ import { useState } from "react";
 import { IoSearch } from "react-icons/io5";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import classes from "./searchBox.module.css";
+import useWindowWidth from "@/hooks/useWindowWidth";
 
 function SearchBox() {
   const [inputValue, setInputValue] = useState("");
+  const windowWidth = useWindowWidth();
 
   function handleClearInput() {
     setInputValue("");
@@ -27,7 +29,7 @@ function SearchBox() {
           </span>
         )}
         <span className={classes.submit}>
-          <IoSearch size={28} />
+          <IoSearch color={windowWidth < 1150 ? "black" : "white"} size={windowWidth < 1150 ? 20 : 28} />
         </span>
       </div>
     </div>

@@ -17,11 +17,11 @@
 
   /* container md */
   --container-width-md: 1150px;
-  --container-padding-md: 0 14px;
+  --container-padding-md: 0 18px;
 
   /* container sm */
   --container-width-sm: 640px;
-  --container-padding-sm: 0 8px;
+  --container-padding-sm: 0 12px;
 
   /* border radius */
   --rounded-full: 50%;
@@ -31,13 +31,13 @@
 
   /* box shadow */
   --shadow-light: 0px 1px 2px 0px;
+  --shadow-dark: 0 -4px 10px 0 rgba(0, 0, 0, 0.08);
 }
 
 html,
 body {
   max-width: 100vw;
   height: 100dvh;
-  overflow-x: hidden;
   font-family: "Albert Sans", sans-serif;
   user-select: none;
 }
@@ -48,7 +48,8 @@ body {
   margin: 0;
 }
 
-ul {
+ul,
+li {
   list-style: none;
 }
 
@@ -61,6 +62,10 @@ input,
 select {
   border: none;
   outline: none;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
 }
 
 .container {

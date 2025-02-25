@@ -8,7 +8,7 @@
   top: 0;
   bottom: 0;
   width: 340px;
-  padding: 20px;
+  padding: 20px 0 20px 20px;
   overflow-y: auto;
   transition: all 0.4s;
   background-color: var(--light-color);
@@ -19,18 +19,7 @@
   flex-direction: column;
   gap: 28px;
   overflow-y: auto;
-  padding-right: 12px;
-}
-
-.main::-webkit-scrollbar {
-  width: 4px;
-  border-radius: var(--rounded-sm);
-  background-color: var(--light-border);
-}
-
-.main::-webkit-scrollbar-thumb {
-  border-radius: var(--rounded-sm);
-  background-color: var(--dark-color);
+  padding-right: 20px;
 }
 
 .btn {
@@ -60,18 +49,11 @@
   border-bottom: 1px solid var(--dark-color);
 }
 
-.help p {
-  color: var(--light-border);
-}
-
-.help span {
-  font-weight: 600;
-}
-
 .footer {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding-right: 20px;
 }
 
 .login {
@@ -89,4 +71,16 @@
 
 .open {
   left: 0;
+}
+
+@media only screen and (max-width: 480px) {
+  .sidebar {
+    width: 280px;
+    padding: 14px 0 14px 14px;
+  }
+
+  .main,
+  .footer {
+    padding-right: 14px;
+  }
 }

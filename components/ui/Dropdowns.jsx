@@ -1,11 +1,11 @@
 import classes from "./dropdowns.module.css";
 import Dropdown from "../layout/header/top-header/Dropdown";
 
-function Dropdowns() {
+function Dropdowns({ place }) {
   return (
     <div className={classes.dropdowns}>
-      <Dropdown render="countryUnit" />
-      <Dropdown render="languages" />
+      <Dropdown render="countryUnit" place={place} />
+      <Dropdown render="languages" place={place} />
     </div>
   );
 }
