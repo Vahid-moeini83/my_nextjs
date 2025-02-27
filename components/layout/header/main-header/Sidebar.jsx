@@ -1,13 +1,19 @@
 "use client";
 
-import { FaBarsStaggered } from "react-icons/fa6";
 import SidebarMenu from "./SidebarMenu";
 import Overlay from "@/components/ui/Overlay";
-import { createPortal } from "react-dom";
 import { useSidebar } from "@/hooks/useSidebar";
+import { useEffect } from "react";
+import { createPortal } from "react-dom";
+import { FaBarsStaggered } from "react-icons/fa6";
 
 function Sidebar() {
   const { isMenuOpen, handleOpenMenu, handleCloseMenu } = useSidebar();
+
+  useEffect(() => {
+    if (isMenuOpen) document.body.classList.add("no-scroll");
+    else document.body.classList.remove("no-scroll");
+  });
 
   return (
     <div>

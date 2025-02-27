@@ -9,10 +9,8 @@ function ScrollUpBtn() {
 
   useEffect(() => {
     function toggleVisibility() {
-      console.log("Scroll Position:", window.scrollY);
       setVisible(window.scrollY > 100);
     }
-    console.log(window.scrollY);
 
     window.addEventListener("scroll", toggleVisibility);
     return () => {

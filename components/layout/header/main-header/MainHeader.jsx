@@ -1,3 +1,5 @@
+"use client";
+
 import classes from "./mainHeader.module.css";
 import MainHeaderBelow from "./MainHeaderBelow";
 import MainHeaderTop from "./MainHeaderTop";

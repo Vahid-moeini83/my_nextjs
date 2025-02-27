@@ -3,6 +3,7 @@
   background-color: var(--dark-background);
   padding-top: 24px;
   padding-bottom: 24px;
+  transition: all 0.3s;
 }
 
 .header > span {

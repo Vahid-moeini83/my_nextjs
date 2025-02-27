@@ -1,5 +1,11 @@
+import SectionIntro from "./SectionIntro";
+
 function HomePage() {
-  return <div>Home Section</div>;
+  return (
+    <>
+      <SectionIntro />
+    </>
+  );
 }
 
 export default HomePage;

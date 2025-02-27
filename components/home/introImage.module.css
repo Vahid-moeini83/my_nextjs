@@ -1,0 +1,44 @@
+.box {
+  overflow: hidden;
+  position: relative;
+  border-radius: var(--rounded-sm);
+}
+
+.box img {
+  transition: all 0.8s;
+}
+
+.box:hover img {
+  transform: scale(1.1);
+}
+
+.content {
+  position: absolute;
+  left: 48px;
+  bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--light-color);
+  background-color: rgb(var(--dark-color), 0.2);
+}
+
+.content span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.content h3 {
+  font-size: 48px;
+}
+
+.content p {
+  font-size: 20px;
+}
+
+.box button {
+  width: 112px;
+  cursor: pointer;
+  margin-top: 20px;
+}

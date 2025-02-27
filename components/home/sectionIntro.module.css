@@ -1,0 +1,18 @@
+.section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.intro {
+  width: 100%;
+}
+
+.images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}

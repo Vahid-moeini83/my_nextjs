@@ -14,7 +14,7 @@ function Button({
     borderRadius: rounded,
     border: "none",
     outline: "none",
-    fontWeight: 500,
+    fontWeight: 600,
     height: 40,
     display: "flex",
     alignItems: "center",

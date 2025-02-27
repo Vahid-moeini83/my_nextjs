@@ -1,7 +1,6 @@
 "use client";
 
 import classes from "./topHeaderHelpers.module.css";
-import Dropdown from "./Dropdown";
 import Dropdowns from "@/components/ui/Dropdowns";
 
 function TopHeaderHelpers() {

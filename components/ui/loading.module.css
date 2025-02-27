@@ -1,0 +1,11 @@
+.loading {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  color: var(--light-color);
+  border-radius: var(--rounded-xs);
+  background-color: var(--purple-color);
+}

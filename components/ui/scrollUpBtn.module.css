@@ -25,13 +25,13 @@
 @media only screen and (min-width: 768px) and (max-width: 1150px) {
   .btn {
     bottom: 154px;
-    right: 34px;
+    right: 18px;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .btn {
     bottom: 86px;
-    right: 34px;
+    right: 18px;
   }
 }
