@@ -20,7 +20,7 @@ function FooterSignUp() {
     <div className={classes.signup}>
       <div className={classes.title}>
         <h3>Sign Up for Email</h3>
-        {windowWidth < 768 && (
+        {windowWidth <= 768 && (
           <>
             {isOpen ? (
               <HiMinus onClick={handleToggleMenu} size={16} />

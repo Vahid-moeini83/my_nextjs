@@ -18,7 +18,7 @@ function LinksList({ title, list }) {
     <div className={classes.box}>
       <div>
         <h3>{title}</h3>
-        {windowWidth < 768 && (
+        {windowWidth <= 768 && (
           <>
             {isOpen ? (
               <HiMinus onClick={handleToggleSubList} size={16} />

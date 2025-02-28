@@ -10,6 +10,7 @@
 }
 
 .dropdown {
+  z-index: 998;
   position: absolute;
   top: 60px;
   opacity: 0;

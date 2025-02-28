@@ -1,0 +1,12 @@
+.images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1150px) {
+  .images {
+    gap: 20px;
+  }
+}

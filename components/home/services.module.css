@@ -1,0 +1,24 @@
+.section {
+  border-bottom: 1px solid var(--light-border);
+}
+
+.services {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1150px) {
+  .services {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 40px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .services {
+    display: none;
+  }
+}

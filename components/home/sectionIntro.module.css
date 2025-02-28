@@ -1,4 +1,4 @@
-.section {
+.intro {
   position: relative;
   display: flex;
   align-items: center;
@@ -6,13 +6,6 @@
   padding: 60px 0;
 }
 
-.intro {
+.content {
   width: 100%;
-}
-
-.images {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
 }

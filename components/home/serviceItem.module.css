@@ -1,0 +1,34 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--rounded-full);
+  border: 1px solid var(--light-border);
+}
+
+.details h3 {
+  margin-bottom: 8px;
+}
+
+.details p {
+  font-size: 14px;
+  color: var(--light-border);
+}
+
+@media only screen and (max-width: 768px) {
+  .item {
+    flex-direction: column;
+  }
+
+  .details {
+    text-align: center;
+  }
+}
