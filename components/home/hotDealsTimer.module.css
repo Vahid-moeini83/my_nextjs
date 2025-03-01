@@ -1,0 +1,18 @@
+.timer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 24px;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--danger-color);
+  border-radius: var(--rounded-md);
+  background-color: color-mix(in srgb, var(--danger-color) 10%, transparent);
+}
+
+@media only screen and (max-width: 768px) {
+  .timer {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+}

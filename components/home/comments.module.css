@@ -1,0 +1,18 @@
+.section {
+  padding-top: 40px;
+}
+
+.box {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--rounded-sm);
+}
+
+.content {
+  position: absolute;
+  background-color: red;
+  color: var(--light-color);
+  top: 50%;
+  z-index: 9;
+}

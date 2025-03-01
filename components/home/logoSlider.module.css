@@ -1,0 +1,8 @@
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 96px;
+  padding: 10px 16px;
+  border-right: 1px solid var(--light-border);
+}

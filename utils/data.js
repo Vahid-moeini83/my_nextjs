@@ -61,3 +61,46 @@ export const footerAboutUsLinks = [
   "Contact Us",
   "Account",
 ];
+
+export const productCategories = [
+  { id: "controller", name: "Controllers" },
+  { id: "keyboard", name: "Keyboards" },
+  { id: "mouse", name: "Mice" },
+  { id: "headphone", name: "Headphones" },
+  { id: "flight", name: "Fly Simuloator" },
+  { id: "race", name: "Race Simuloator" },
+  { id: "monitor", name: "Monitor" },
+];
+
+export const logos = [
+  "logo-1",
+  "logo-2",
+  "logo-3",
+  "logo-4",
+  "logo-5",
+  "logo-6",
+];
+
+export const comments = [
+  {
+    id: "item-1",
+    customer: "Vincent Pahm",
+    item: "logitech G29 Driving Force Wired Controller",
+    description:
+      "This four-button console is a perfect throwback! Simple design with classic games like Contra and Mario—great for reliving childhood memories.",
+  },
+  {
+    id: "item-2",
+    customer: "Jack Smith",
+    item: "HTC VIVE Pro Virtual Reality Headset",
+    description:
+      "With stunning visuals and seamless motion tracking, this VR headset delivers an immersive experience that’s perfect for gaming and virtual exploration.",
+  },
+  {
+    id: "item-3",
+    customer: "Ben",
+    item: "SONY DualSense Wireless Controller",
+    description:
+      "Ergonomic and responsive, this game controller provides precise controls and a comfortable grip, perfect for long gaming sessions.",
+  },
+];

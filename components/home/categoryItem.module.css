@@ -1,0 +1,25 @@
+.item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--light-color);
+}
+
+.image {
+  width: 100%;
+  max-width: 160px;
+  aspect-ratio: 1 / 1;
+}
+
+.image img {
+  margin-bottom: 16px;
+  border-radius: var(--rounded-xs);
+}
+
+.item h3 {
+  transition: all 0.4s;
+}
+
+.item h3:hover {
+  color: var(--purple-color);
+}
