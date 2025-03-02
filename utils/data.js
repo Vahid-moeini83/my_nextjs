@@ -86,6 +86,7 @@ export const comments = [
     id: "item-1",
     customer: "Vincent Pahm",
     item: "logitech G29 Driving Force Wired Controller",
+    rating: 5,
     description:
       "This four-button console is a perfect throwback! Simple design with classic games like Contra and Mario—great for reliving childhood memories.",
   },
@@ -93,6 +94,7 @@ export const comments = [
     id: "item-2",
     customer: "Jack Smith",
     item: "HTC VIVE Pro Virtual Reality Headset",
+    rating: 4,
     description:
       "With stunning visuals and seamless motion tracking, this VR headset delivers an immersive experience that’s perfect for gaming and virtual exploration.",
   },
@@ -100,6 +102,7 @@ export const comments = [
     id: "item-3",
     customer: "Ben",
     item: "SONY DualSense Wireless Controller",
+    rating: 5,
     description:
       "Ergonomic and responsive, this game controller provides precise controls and a comfortable grip, perfect for long gaming sessions.",
   },

@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { FaRegClock } from "react-icons/fa6";
 
 function HotDealsTimer({ targetDate }) {
+  const [timeLeft, setTimeLeft] = useState(null);
+
   function calculateTimeLeft() {
     const difference = new Date(targetDate) - new Date();
     if (difference <= 0) {
@@ -28,8 +30,6 @@ function HotDealsTimer({ targetDate }) {
     return { days, hours, minutes, seconds };
   }
 
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
@@ -37,6 +37,8 @@ function HotDealsTimer({ targetDate }) {
 
     return () => clearInterval(timer);
   }, []);
+
+  if (!timeLeft) return;
 
   return (
     <div className={classes.timer}>
