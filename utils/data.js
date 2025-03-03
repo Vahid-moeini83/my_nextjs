@@ -1,3 +1,9 @@
+export const suggestions = [
+  { id: 1, text: "Ultimate Gaming Gear Sale - Don’t Miss These Deals!" },
+  { id: 2, text: "Power Up with Premium Gaming Gear - Prices Slashed!" },
+  { id: 3, text: "Epic Gaming Gear Sale - Get Up to 50% Off!" },
+];
+
 export const countries = [
   { id: "usa", name: "United States", unit: "USD" },
   { id: "vtn", name: "Vietnam", unit: "VTN" },

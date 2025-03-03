@@ -1,17 +1,10 @@
 "use client";
 
-// Styles
 import classes from "./topHeaderSuggestions.module.css";
-
-// Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-
-const suggestions = [
-  { id: 1, text: "Ultimate Gaming Gear Sale - Don’t Miss These Deals!" },
-  { id: 2, text: "Power Up with Premium Gaming Gear - Prices Slashed!" },
-  { id: 3, text: "Epic Gaming Gear Sale - Get Up to 50% Off!" },
-];
+import "swiper/css";
+import { suggestions } from "@/utils/data";
 
 function TopHeaderSuggestions() {
   return (

@@ -1,0 +1,17 @@
+.prices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.real {
+  color: var(--light-border);
+  text-decoration: line-through;
+}
+
+.final {
+  color: var(--danger-color);
+  font-weight: 600;
+}

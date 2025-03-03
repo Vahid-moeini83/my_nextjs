@@ -1,0 +1,32 @@
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 16px;
+}
+
+.button {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  color: white;
+  border: none;
+  background-color: black;
+  border-radius: var(--rounded-full);
+}
+
+.button::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: -4px;
+  left: -5px;
+  border-radius: var(--rounded-full);
+  border: 1px solid var(--gray-background);
+}
+
+.active::after {
+  border-color: var(--dark-color);
+}

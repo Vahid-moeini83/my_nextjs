@@ -1,0 +1,27 @@
+.box {
+  overflow: hidden;
+  max-height: 320px;
+  margin-bottom: 14px;
+  border-radius: var(--rounded-xs);
+}
+
+.image {
+  transition: all 1s;
+}
+
+.box:hover .image {
+  transform: scale(1.1);
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .box {
+    max-height: 280px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .box {
+    max-height: 240px;
+    margin-bottom: 10px;
+  }
+}

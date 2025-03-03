@@ -1,8 +1,9 @@
 import ProductImage from "@/components/ui/ProductImage";
-import { getProducts } from "@/lib/faker";
+import { getAllProducts } from "@/lib/faker";
+import Link from "next/link";
 
 function GamingProducts() {
-  const products = getProducts(8);
+  const products = getAllProducts();
 
   if (!products || products.length === 0) return <p>No products yet!</p>;
 
@@ -18,7 +19,7 @@ function GamingProducts() {
           }}
           key={product.id}
         >
-          {product.name}
+          <Link href={`/collections/gaming/${product.id}`}>{product.name}</Link>
           {`$${product.price}`}
           <ProductImage
             src={product.image[1]}

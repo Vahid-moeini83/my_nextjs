@@ -4,10 +4,10 @@ import { IoClose } from "react-icons/io5";
 import { categories } from "@/utils/data";
 import Link from "next/link";
 import SearchProducts from "@/components/products/SearchProducts";
-import { getProducts } from "@/lib/faker";
+import { getIsFeaturedProducts } from "@/lib/faker";
 
 function SidebarSearch({ isOpen, onClose }) {
-  const products = getProducts(5);
+  const products = getIsFeaturedProducts();
 
   return (
     <div

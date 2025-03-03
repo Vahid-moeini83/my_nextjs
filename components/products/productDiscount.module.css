@@ -1,0 +1,13 @@
+.discount {
+  z-index: 9;
+  padding: 4px 10px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--light-color);
+  border-radius: var(--rounded-md);
+  box-shadow: var(--shadow-light);
+  background-color: var(--orange-color);
+}

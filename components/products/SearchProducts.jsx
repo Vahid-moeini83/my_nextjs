@@ -1,7 +1,7 @@
 import classes from "./searchProducts.module.css";
 import ProductImage from "../ui/ProductImage";
-import { formatPrice } from "@/utils/helpers";
 import Link from "next/link";
+import ProductPrice from "./ProductPrice";
 
 function SearchProducts({ products }) {
   return (
@@ -17,15 +17,10 @@ function SearchProducts({ products }) {
             />
           </Link>
           <div className={classes.details}>
-            <Link href="#" className={classes.name}>{product.name}</Link>
-            <div>
-              <span className={classes.real}>{formatPrice(product.price)}</span>
-              <span className={classes.final}>
-                {formatPrice(
-                  product.price - product.price * (product.discount / 100)
-                )}
-              </span>
-            </div>
+            <Link href="#" className={classes.name}>
+              {product.name}
+            </Link>
+            <ProductPrice price={product.price} discount={product.discount} />
           </div>
         </li>
       ))}
