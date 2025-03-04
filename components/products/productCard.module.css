@@ -6,12 +6,59 @@
   background-color: var(--light-color);
 }
 
+.border {
+  border: 1px solid var(--gray-background);
+}
+
 .details {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add {
+  cursor: pointer;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 24px;
+  background-color: transparent;
+  border-radius: var(--rounded-md);
+  border: 1px solid var(--light-border);
+}
+
+@media only screen and (min-width: 1150px) {
+  .buttons {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+  }
+
+  .card:hover .buttons {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .card {
+    min-height: 442px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
+  .card {
+    min-height: 400px;
+  }
+
   .details h4 {
     font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .card {
+    min-height: 356px;
   }
 }

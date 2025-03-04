@@ -1,12 +1,12 @@
 "use client";
 
 import useWindowWidth from "@/hooks/useWindowWidth";
-import classes from "./cardImage.module.css";
+import classes from "./productImage.module.css";
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 
-function CardImage({ images, to, alt }) {
+function ProductImage({ images, to, alt }) {
   const [isHovered, setIsHovered] = useState(false);
   const windowWidth = useWindowWidth();
 
@@ -27,4 +27,4 @@ function CardImage({ images, to, alt }) {
   );
 }
 
-export default CardImage;
+export default ProductImage;

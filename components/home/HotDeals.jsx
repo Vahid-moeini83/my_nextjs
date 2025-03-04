@@ -1,8 +1,8 @@
-import { getAllProducts } from "@/lib/faker";
-import SectionTitle from "../ui/SectionTitle";
 import classes from "./hotDeals.module.css";
+import SectionTitle from "../ui/SectionTitle";
 import HotDealsTimer from "./HotDealsTimer";
-import HotDealsSlider from "./HotDealsSlider";
+import ProductsSlider from "./ProductsSlider";
+import { getAllProducts } from "@/lib/faker";
 
 function HotDeals() {
   const products = getAllProducts();
@@ -14,7 +14,7 @@ function HotDeals() {
           <SectionTitle title="Hot Deals" />
           <HotDealsTimer targetDate="2025-04-01T00:00:00" />
         </div>
-        <HotDealsSlider products={products} />
+        <ProductsSlider products={products} />
       </div>
     </section>
   );

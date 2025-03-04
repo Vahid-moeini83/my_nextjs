@@ -1,0 +1,59 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 65%;
+}
+
+.space {
+  top: 58%;
+}
+
+.button {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.3s;
+  transform: translateY(0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-dark);
+  border-radius: var(--rounded-xs);
+  background-color: var(--light-color);
+}
+
+.button:hover {
+  color: var(--light-color);
+  background-color: var(--dark-color);
+}
+
+@media only screen and (max-width: 768px) {
+  .heart, .compare {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .wrapper {
+    top: 60%;
+  }
+
+  .space {
+    top: 54%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .wrapper {
+    top: 58%;
+  }
+
+  .space {
+    top: 51%;
+  }
+}

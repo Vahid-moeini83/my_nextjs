@@ -5,7 +5,7 @@ import { comments } from "@/utils/data";
 
 function Comments() {
   return (
-    <section className={classes.section}>
+    <section>
       <div className="container">
         <div className={classes.box}>
           <Image

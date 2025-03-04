@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import classes from "./logoSlider.module.css";
+import classes from "./logosSlider.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import useWindowWidth from "@/hooks/useWindowWidth";

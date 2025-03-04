@@ -1,7 +1,7 @@
 import Link from "next/link";
-import classes from "./cardTitle.module.css";
+import classes from "./productTitle.module.css";
 
-function CardTitle({ title, to }) {
+function ProductTitle({ title, to }) {
   return (
     <Link href={to}>
       <h4 className={classes.title}>{title}</h4>
@@ -9,4 +9,4 @@ function CardTitle({ title, to }) {
   );
 }
 
-export default CardTitle;
+export default ProductTitle;

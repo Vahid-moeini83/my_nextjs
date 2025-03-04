@@ -1,9 +1,16 @@
 .section {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 64px;
+  padding-bottom: 64px;
 }
 
 .box {
   border-radius: var(--rounded-sm);
   border: 1px solid var(--light-border);
+}
+
+@media only screen and (max-width: 768px) {
+  .section {
+    padding-top: 54px;
+    padding-bottom: 54px;
+  }
 }
