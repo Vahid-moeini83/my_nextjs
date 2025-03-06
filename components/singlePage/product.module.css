@@ -1,0 +1,16 @@
+.section {
+  padding-top: 36px;
+  padding-bottom: 64px;
+}
+
+.product {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .product {
+    flex-direction: column;
+  }
+}

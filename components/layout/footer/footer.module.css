@@ -25,23 +25,6 @@
   background-color: var(--light-border);
 }
 
-.rights {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.rights p {
-  opacity: 0.6;
-  font-size: 14px;
-}
-
-.rights div {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
 @media only screen and (max-width: 1150px) {
   .footer {
     padding-top: 20px;
@@ -71,11 +54,5 @@
 
   .footer h3 {
     margin-bottom: 20px;
-  }
-
-  .rights {
-    flex-direction: column;
-    justify-content: unset;
-    gap: 8px;
   }
 }

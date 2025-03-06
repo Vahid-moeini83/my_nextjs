@@ -1,0 +1,19 @@
+.path {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  padding-top: 36px;
+}
+
+.path a {
+  transition: all 0.3s;
+}
+
+.path a:hover {
+  color: var(--purple-color);
+}
+
+.path span {
+  color: var(--light-border);
+}

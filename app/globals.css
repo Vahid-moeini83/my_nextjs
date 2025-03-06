@@ -152,10 +152,11 @@ input[type="search"]::-webkit-search-cancel-button {
 @media only screen and (max-width: 1150px) {
   .custom-slider {
     padding-top: 32px !important;
-    padding-bottom: 64px !important;
+    padding-bottom: 54px !important;
   }
 
   .custom-slider .swiper-pagination {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -211,6 +212,10 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 @media only screen and (max-width: 768px) {
+  .custom-slider {
+    padding-top: 14px !important;
+  }
+
   .comments-slider {
     padding-top: 0 !important;
     padding-bottom: 40px !important;

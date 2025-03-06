@@ -1,0 +1,11 @@
+.quantity {
+  padding: 10px 8px;
+  font-size: 20px;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: var(--rounded-xs);
+  background-color: var(--gray-background);
+}

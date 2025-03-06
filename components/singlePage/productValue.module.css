@@ -1,0 +1,30 @@
+.values {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.value {
+  font-size: 28px;
+  color: var(--light-background);
+}
+
+.final {
+  font-size: 28px;
+  color: var(--danger-color);
+}
+
+.real {
+  font-size: 20px;
+  text-decoration: line-through;
+  color: var(--light-border);
+}
+
+.discount {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 16px;
+  color: var(--light-color);
+  border-radius: var(--rounded-md);
+  background-color: var(--orange-color);
+}

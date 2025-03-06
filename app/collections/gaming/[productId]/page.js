@@ -1,15 +1,10 @@
-import { getProduct } from "@/lib/faker";
-import Image from "next/image";
+import ProductPage from "@/components/singlePage/ProductPage";
+import { getProductById } from "@/lib/faker";
 
 async function ProductSinglePage({ params }) {
-  const product = getProduct(params.productId);
+  const product = getProductById(params.productId);
 
-  return (
-    <div style={{ height: "100vh" }}>
-      {product.name}
-      <Image src={product.image[1]} width={404} height={404} alt={product.name} />
-    </div>
-  );
+  return <ProductPage product={product} />;
 }
 
 export default ProductSinglePage;

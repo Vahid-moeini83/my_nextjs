@@ -15,12 +15,12 @@ function ProductButtons({ addToCartBtn }) {
         </CustomTooltip>
       )}
       <CustomTooltip title="Add to wishlist" placement="top">
-        <div className={`${classes.button} ${classes.heart}`}>
+        <div className={`${classes.button} ${classes.none}`}>
           <FaRegHeart size={20} />
         </div>
       </CustomTooltip>
       <CustomTooltip title="Add to compare" placement="top">
-        <div className={`${classes.button} ${classes.compare}`}>
+        <div className={`${classes.button} ${classes.none}`}>
           <RiArrowLeftRightLine size={20} />
         </div>
       </CustomTooltip>

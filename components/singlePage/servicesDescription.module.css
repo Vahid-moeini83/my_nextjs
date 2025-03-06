@@ -1,0 +1,33 @@
+.wrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.description {
+  width: 50%;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 12px;
+  font-size: 14px;
+  padding: 0 24px;
+  border-radius: var(--rounded-xs);
+  border: 1px solid var(--gray-background);
+}
+
+.description span {
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 1150px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .description {
+    width: 100%;
+  }
+}

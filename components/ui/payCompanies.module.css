@@ -1,0 +1,24 @@
+.companies {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.companies p {
+  opacity: 0.6;
+  font-size: 14px;
+}
+
+.companies div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .companies {
+    flex-direction: column;
+    justify-content: unset;
+    gap: 8px;
+  }
+}
