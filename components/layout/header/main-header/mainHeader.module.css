@@ -26,12 +26,16 @@
   }
 
   .hidden {
-    transform: translateY(-100%);
+    /* transform: translateY(-100%); */
+    opacity: 0;
+    visibility: hidden;
     pointer-events: none;
   }
 
   .visible {
-    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    /* transform: translateY(0); */
   }
 }
 
