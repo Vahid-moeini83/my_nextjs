@@ -76,7 +76,8 @@
 @media only screen and (max-width: 480px) {
   .sidebar {
     width: 280px;
-    padding: 14px 0 14px 14px;
+    justify-content: unset;
+    gap: 30px;
   }
 
   .main,

@@ -6,6 +6,12 @@
   background-color: var(--light-color);
 }
 
+.flex {
+  display: flex;
+  gap: 16px;
+  border-bottom: 1px solid var(--gray-background);
+}
+
 .border {
   border: 1px solid var(--gray-background);
 }
@@ -28,6 +34,20 @@
   border: 1px solid var(--light-border);
 }
 
+.padding {
+  padding: 0 !important;
+}
+
+.visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.gap {
+  align-items: flex-start;
+  gap: 16px;
+}
+
 @media only screen and (min-width: 1150px) {
   .buttons {
     opacity: 0;
@@ -45,11 +65,19 @@
   .card {
     min-height: 442px;
   }
+
+  .flex {
+    min-height: 440px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
   .card {
     min-height: 400px;
+  }
+
+  .flex {
+    min-height: 0;
   }
 
   .details h4 {
@@ -62,7 +90,7 @@
     min-height: 356px;
   }
 
-  .padding {
-    padding: 4px;
+  .flex {
+    min-height: 0;
   }
 }

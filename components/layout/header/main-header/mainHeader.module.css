@@ -15,6 +15,26 @@
   margin: 24px 0;
 }
 
+@media only screen and (min-width: 1150px) {
+  .sticky {
+    width: 100%;
+    z-index: 998;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .hidden {
+    transform: translateY(-100%);
+    pointer-events: none;
+  }
+
+  .visible {
+    transform: translateY(0);
+  }
+}
+
 @media only screen and (max-width: 1150px) {
   .header > span {
     display: none;

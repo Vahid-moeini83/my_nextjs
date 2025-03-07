@@ -10,7 +10,12 @@ function ProductsList({ products, gridValue }) {
       <div className="container">
         <div className={`${classes.grid} ${classes[gridValue]}`}>
           {products.map((product) => (
-            <ProductCard key={product.id} product={product} isInGrid={true} />
+            <ProductCard
+              key={product.id}
+              product={product}
+              isInGrid={true}
+              gridValue={gridValue}
+            />
           ))}
         </div>
       </div>

@@ -5,13 +5,16 @@ import Image from "next/image";
 import Link from "next/link";
 import useWindowWidth from "@/hooks/useWindowWidth";
 import { useState } from "react";
+import ProductDiscount from "./ProductDiscount";
 
-function ProductImage({ images, to, alt, isInGrid }) {
+function ProductImage({ images, to, alt, discount, isInGrid, gridValue }) {
   const [isHovered, setIsHovered] = useState(false);
   const windowWidth = useWindowWidth();
+  const hasFullWidth = gridValue === "grid-1";
 
   return (
-    <div className={classes.box}>
+    <div className={`${hasFullWidth ? classes.fullWidth : classes.box}`}>
+      <ProductDiscount discount={discount} />
       <Link href={to}>
         <Image
           src={isHovered && windowWidth > 768 ? images[2] : images[1]}

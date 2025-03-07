@@ -6,7 +6,15 @@
   position: absolute;
   right: 0;
   left: 0;
-  top: 64%;
+  top: 62%;
+}
+
+.fullWidth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .space {

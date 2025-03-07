@@ -7,6 +7,13 @@
   border-radius: var(--rounded-xs);
 }
 
+.fullWidth {
+  width: 440px;
+  max-height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
 .image {
   transition: all 1s;
 }
@@ -16,9 +23,21 @@
   height: 100% !important;
 }
 
+.height {
+  max-height: 440px !important;
+}
+
 @media only screen and (min-width: 768px) {
   .box:hover .image {
     transform: scale(1.1);
+  }
+
+  .fullWidth:hover .image {
+    transform: scale(1.1);
+  }
+
+  .height {
+    max-height: 400px;
   }
 }
 
@@ -26,11 +45,21 @@
   .box {
     max-height: 280px;
   }
+
+  .fullWidth {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
   .box {
     max-height: 240px;
     margin-bottom: 10px;
+  }
+
+  .fullWidth {
+    width: 180px;
+    height: 180px;
   }
 }

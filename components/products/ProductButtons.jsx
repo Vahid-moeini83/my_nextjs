@@ -4,9 +4,15 @@ import { RiShoppingBag2Line, RiArrowLeftRightLine } from "react-icons/ri";
 import { AiOutlineEye } from "react-icons/ai";
 import { FaRegHeart } from "react-icons/fa";
 
-function ProductButtons({ addToCartBtn, isInGrid }) {
+function ProductButtons({ addToCartBtn, isInGrid, gridValue }) {
+  const hasFullWidth = gridValue === "grid-1";
+
   return (
-    <div className={`${classes.wrapper} ${addToCartBtn && classes.space}`}>
+    <div
+      className={`${hasFullWidth ? classes.fullWidth : classes.wrapper} ${
+        addToCartBtn && classes.space
+      }`}
+    >
       {!addToCartBtn && (
         <CustomTooltip title="Add to cart" placement="top">
           <div
