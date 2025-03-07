@@ -61,4 +61,8 @@
   .card {
     min-height: 356px;
   }
+
+  .padding {
+    padding: 4px;
+  }
 }

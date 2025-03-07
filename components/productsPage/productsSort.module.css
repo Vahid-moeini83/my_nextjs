@@ -1,0 +1,24 @@
+.sort {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.select {
+  width: 200px;
+  height: 48px;
+  font-size: 14px;
+  outline: none;
+  border: 1px solid var(--light-border);
+}
+
+.select:hover {
+  border-color: var(--dark-color);
+}
+
+@media only screen and (max-width: 768px) {
+  .select {
+    width: 80px;
+    height: 40px;
+    color: var(--light-background);
+  }
+}

@@ -13,7 +13,7 @@ function SidebarSearch({ isOpen, onClose }) {
     <div
       className={`${classes.sidebar} ${isOpen ? classes.open : classes.close}`}
     >
-      <div className={classes.header}>
+      <div>
         <div className={classes.title}>
           <div>
             <h2>Search our site</h2>

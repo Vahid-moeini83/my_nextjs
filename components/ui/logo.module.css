@@ -13,5 +13,6 @@
 @media only screen and (max-width: 1150px) {
   .logo {
     text-align: left;
+    padding-left: 20px;
   }
 }

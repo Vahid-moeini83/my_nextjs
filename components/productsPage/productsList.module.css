@@ -1,0 +1,47 @@
+.section {
+  padding-bottom: 20px;
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 600;
+  height: 50vh;
+}
+
+.grid {
+  display: grid;
+  width: 100%;
+}
+
+.grid-6 {
+  grid-template-columns: repeat(6, 1fr);
+  row-gap: 20px;
+}
+
+.grid-5 {
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: 20px;
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 20px;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 20px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 20px;
+}
+
+.grid-1 {
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+}

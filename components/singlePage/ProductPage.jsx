@@ -5,8 +5,7 @@ import ProductToggleTabs from "./ProductToggleTabs";
 import RecentProductsSlider from "./RecentProductsSlider";
 
 function ProductPage({ product }) {
-  const { id, name, discount, price, image, colors, isFeatured, bestSelling } =
-    product;
+  const { name, discount, price, image, colors } = product;
 
   return (
     <div className="container">

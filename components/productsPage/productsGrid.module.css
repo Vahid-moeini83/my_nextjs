@@ -1,0 +1,39 @@
+.grids {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.grid {
+  cursor: pointer;
+  color: var(--light-border);
+}
+
+.grid:hover {
+  color: var(--dark-color);
+}
+
+.active {
+  color: var(--dark-color);
+}
+
+@media only screen and (max-width: 1150px) {
+  .grid-6,
+  .grid-5 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .grids {
+    gap: 16px;
+  }
+
+  .grid-4,
+  .grid-3 {
+    display: none;
+  }
+}

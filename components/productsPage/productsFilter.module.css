@@ -1,0 +1,20 @@
+.filter {
+  display: flex;
+  justify-content: flex-start;
+  font-weight: 500;
+}
+
+.filterButton {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: var(--rounded-xs);
+  border: 1px solid var(--light-border);
+}
+
+.filterButton:hover {
+  border-color: var(--dark-color);
+}

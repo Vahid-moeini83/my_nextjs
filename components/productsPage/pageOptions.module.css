@@ -1,0 +1,11 @@
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 32px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .options {
+    padding: 20px 0;
+  }
+}

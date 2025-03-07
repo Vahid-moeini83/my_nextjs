@@ -6,7 +6,7 @@
   position: absolute;
   right: 0;
   left: 0;
-  top: 65%;
+  top: 64%;
 }
 
 .space {
@@ -30,6 +30,13 @@
 .button:hover {
   color: var(--light-color);
   background-color: var(--dark-color);
+}
+
+@media only screen and (max-width: 1150px) {
+  .small {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
