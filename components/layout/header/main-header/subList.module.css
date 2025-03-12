@@ -5,7 +5,7 @@
   gap: 12px;
   overflow: hidden;
   color: var(--light-border);
-  transition: all 0.3s;
+  transition: all 0.3s ease-out;
 }
 
 .open {

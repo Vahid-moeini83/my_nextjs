@@ -6,10 +6,6 @@
   padding: 10px 0;
 }
 
-.products li:not(:last-child) {
-  border-bottom: 1px solid var(--light-border);
-}
-
 .name {
   transition: all 0.3s;
 }
@@ -43,10 +39,18 @@
     border-radius: var(--rounded-sm);
     background: var(--dark-background);
   }
+
+  .products li:not(:last-child) {
+    border-bottom: 1px solid var(--dark-border);
+  }
 }
 
 @media only screen and (max-width: 1150px) {
   .products {
     flex-direction: column;
+  }
+
+  .products li:not(:last-child) {
+    border-bottom: 1px solid var(--light-border);
   }
 }

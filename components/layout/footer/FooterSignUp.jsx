@@ -5,8 +5,8 @@ import classes from "./footerSignUp.module.css";
 import Dropdowns from "@/components/ui/Dropdowns";
 import { useState } from "react";
 import { MdArrowOutward } from "react-icons/md";
-import { HiMinus, HiPlus } from "react-icons/hi2";
 import useWindowWidth from "@/hooks/useWindowWidth";
+import ToggleListIcon from "@/components/ui/ToggleListIcon";
 
 function FooterSignUp() {
   const windowWidth = useWindowWidth();
@@ -21,13 +21,11 @@ function FooterSignUp() {
       <div className={classes.title}>
         <h3>Sign Up for Email</h3>
         {windowWidth <= 768 && (
-          <>
-            {isOpen ? (
-              <HiMinus onClick={handleToggleMenu} size={16} />
-            ) : (
-              <HiPlus onClick={handleToggleMenu} size={16} />
-            )}
-          </>
+          <ToggleListIcon
+            isOpen={isOpen}
+            onToggle={handleToggleMenu}
+            color="light"
+          />
         )}
       </div>
       <div
@@ -44,9 +42,7 @@ function FooterSignUp() {
             <MdArrowOutward size={18} />
           </Link>
         </div>
-        <div className={classes.dropdowns}>
-          <Dropdowns place="footer" />
-        </div>
+        <Dropdowns place="footer" />
       </div>
     </div>
   );

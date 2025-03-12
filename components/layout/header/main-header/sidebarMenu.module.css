@@ -17,7 +17,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 24px;
   overflow-y: auto;
   padding-right: 20px;
 }
@@ -75,9 +75,11 @@
 
 @media only screen and (max-width: 480px) {
   .sidebar {
-    width: 280px;
-    justify-content: unset;
-    gap: 30px;
+    width: 320px;
+  }
+
+  .close {
+    left: -320px;
   }
 
   .main,

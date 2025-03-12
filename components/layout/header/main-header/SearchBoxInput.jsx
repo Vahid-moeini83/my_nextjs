@@ -24,7 +24,7 @@ function SearchBoxInput() {
       <div className={classes.icon}>
         {inputValue.length > 0 && (
           <span className={classes.close} onClick={handleClearInput}>
-            <IoIosCloseCircleOutline color="black" size={24} />
+            <IoIosCloseCircleOutline color="black" size={20} />
           </span>
         )}
         <span className={classes.submit}>

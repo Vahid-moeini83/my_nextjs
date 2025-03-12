@@ -4,6 +4,11 @@
   gap: 4px;
 }
 
+.selectIcon {
+  position: absolute;
+  right: 14px;
+}
+
 .arrow {
   content: "";
   display: block;

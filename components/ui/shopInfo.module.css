@@ -1,7 +1,7 @@
 .info {
   font-size: 14px;
   line-height: 28px;
-  color: var(--light-border);
+  color: var(--gray-medium-color);
 }
 
 .info span {
@@ -13,4 +13,3 @@
     line-height: 24px;
   }
 }
-

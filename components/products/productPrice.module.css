@@ -7,11 +7,17 @@
 }
 
 .real {
-  color: var(--light-border);
+  color: var(--gray-medium-color);
   text-decoration: line-through;
 }
 
 .final {
   color: var(--danger-color);
   font-weight: 600;
+}
+
+@media only screen and (max-width: 1150px) {
+  .real {
+    color: var(--gray-color);
+  }
 }

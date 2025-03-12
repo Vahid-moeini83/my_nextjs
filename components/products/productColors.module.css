@@ -16,47 +16,42 @@
 
 .button,
 .biggerButton {
-  position: relative;
   color: white;
-  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  background-color: black;
   border-radius: var(--rounded-full);
+  background-color: var(--light-color);
+  border: 1px solid var(--light-border);
 }
 
 .button {
-  width: 16px;
-  height: 16px;
-}
-
-.button::after,
-.biggerButton::after {
-  content: "";
-  position: absolute;
-  border-radius: var(--rounded-full);
-  border: 1px solid var(--gray-background);
-}
-
-.active::after {
-  border-color: var(--dark-color);
-}
-
-.button::after {
-  left: -5px;
-  top: -4px;
-  width: 24px;
-  height: 24px;
-}
-
-.biggerButton::after {
-  left: -6px;
-  top: -6px;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
 
 .biggerButton {
-  width: 20px;
-  height: 20px;
+  width: 32px;
+  height: 32px;
   margin-left: 6px;
+}
+
+.active {
+  transition: all 0.3s;
+  transition-delay: 0.2s;
+  border-color: var(--dark-color);
+}
+
+.active .color {
+  width: 13px;
+  height: 13px;
+  transition: all 0.3s;
+  transition-delay: 0.2s;
+}
+
+.color {
+  width: 18px;
+  height: 18px;
+  border-radius: var(--rounded-full);
 }

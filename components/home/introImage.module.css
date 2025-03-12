@@ -17,6 +17,7 @@
 }
 
 .content span {
+  color: var(--light-medium-color);
   font-size: 14px;
   font-weight: bold;
 }
@@ -26,6 +27,7 @@
 }
 
 .content p {
+  color: var(--light-medium-color);
   font-size: 20px;
   width: 100%;
 }

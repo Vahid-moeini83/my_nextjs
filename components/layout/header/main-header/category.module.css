@@ -32,18 +32,16 @@
 }
 
 .list {
-  padding: 24px 22px 12px 22px;
+  padding: 24px 22px 0 22px;
   background-color: var(--dark-background);
 }
 
 .list ul {
   font-weight: 500;
-  margin-bottom: 16px;
-  gap: 16px;
 }
 
 .list ul li {
-  margin-bottom: 18px;
+  margin-bottom: 12px;
   position: relative;
 }
 
@@ -57,9 +55,9 @@
   width: calc(100% - 56px);
   height: 1px;
   position: absolute;
-  bottom: -10px;
+  bottom: -6px;
   right: 0;
-  background: var(--light-background);
+  background: var(--dark-blue-color);
 }
 
 .list ul li a {
@@ -76,7 +74,7 @@
 
 .link {
   text-align: left;
-  padding: 20px 22px;
+  padding: 16px 22px;
   background-color: var(--light-background);
 }
 

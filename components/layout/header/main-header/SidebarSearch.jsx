@@ -14,12 +14,15 @@ function SidebarSearch({ isOpen, onClose }) {
       className={`${classes.sidebar} ${isOpen ? classes.open : classes.close}`}
     >
       <div>
-        <div className={classes.title}>
-          <div>
-            <h2>Search our site</h2>
-            <IoClose color="black" size={24} onClick={onClose} />
+        <div className={classes.header}>
+          <div className={classes.title}>
+            <div>
+              <h2>Search our site</h2>
+              <IoClose color="black" size={24} onClick={onClose} />
+            </div>
+            <SearchBox />
           </div>
-          <SearchBox />
+          <span className={classes.line}></span>
         </div>
         <div className={classes.main}>
           <div className={classes.links}>
@@ -33,6 +36,7 @@ function SidebarSearch({ isOpen, onClose }) {
             </ul>
           </div>
           <div className={classes.products}>
+            <h3>Need some inspiration?</h3>
             <SearchProducts products={products} />
           </div>
         </div>

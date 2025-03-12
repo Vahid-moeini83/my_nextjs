@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import classes from "./linksList.module.css";
+import ToggleListIcon from "@/components/ui/ToggleListIcon";
 import useWindowWidth from "@/hooks/useWindowWidth";
 import { useState } from "react";
-import { HiMinus, HiPlus } from "react-icons/hi2";
 
 function LinksList({ title, list }) {
   const windowWidth = useWindowWidth();
@@ -19,13 +19,7 @@ function LinksList({ title, list }) {
       <div>
         <h3>{title}</h3>
         {windowWidth <= 768 && (
-          <>
-            {isOpen ? (
-              <HiMinus onClick={handleToggleSubList} size={16} />
-            ) : (
-              <HiPlus onClick={handleToggleSubList} size={16} />
-            )}
-          </>
+          <ToggleListIcon isOpen={isOpen} onToggle={handleToggleSubList} />
         )}
       </div>
       <ul className={`${isOpen ? classes.open : classes.close}`}>

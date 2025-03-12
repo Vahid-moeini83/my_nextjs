@@ -1,5 +1,5 @@
 import classes from "./dropdowns.module.css";
-import Dropdown from "../layout/header/top-header/Dropdown";
+import Dropdown from "./Dropdown";
 
 function Dropdowns({ place }) {
   return (

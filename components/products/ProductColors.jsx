@@ -21,6 +21,10 @@ function ProductColors({ colors, hasText }) {
 
   const [activeColor, setActiveColor] = useState(colors[0]);
 
+  function handleActiveColor(color) {
+    setActiveColor(color);
+  }
+
   return (
     <div>
       {hasText && (
@@ -32,12 +36,17 @@ function ProductColors({ colors, hasText }) {
         {colors.map((color, index) => (
           <BootstrapTooltip key={index} title={color} arrow placement="bottom">
             <button
-              style={{ background: color }}
               className={`${hasText ? classes.biggerButton : classes.button} ${
                 activeColor === color ? classes.active : ""
               }`}
               onClick={() => setActiveColor(color)}
-            ></button>
+              onMouseMove={() => handleActiveColor(color)}
+            >
+              <span
+                style={{ background: color }}
+                className={classes.color}
+              ></span>
+            </button>
           </BootstrapTooltip>
         ))}
       </div>

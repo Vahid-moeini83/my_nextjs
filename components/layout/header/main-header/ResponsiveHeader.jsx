@@ -7,7 +7,7 @@ function ResponsiveHeader() {
   return (
     <div className={`container ${classes.header}`}>
       <Sidebar />
-      <Logo />
+      <Logo isCenter={true} />
       <SubNav />
     </div>
   );

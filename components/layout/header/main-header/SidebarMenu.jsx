@@ -23,7 +23,7 @@ function SidebarMenu({ isOpen, onClose }) {
         <div className={classes.buttons}>
           <Button
             color="var(--light-color)"
-            background="var(--dark-background)"
+            background="var(--dark-color)"
             rounded="var(--rounded-xs)"
             to="#"
             className={classes.btn}
@@ -33,7 +33,7 @@ function SidebarMenu({ isOpen, onClose }) {
           </Button>
           <Button
             color="var(--light-color)"
-            background="var(--dark-background)"
+            background="var(--dark-color)"
             rounded="var(--rounded-xs)"
             to="#"
             className={classes.btn}
@@ -50,7 +50,7 @@ function SidebarMenu({ isOpen, onClose }) {
       <div className={classes.footer}>
         <Button
           color="var(--light-color)"
-          background="var(--dark-background)"
+          background="var(--dark-color)"
           rounded="var(--rounded-xs)"
           to="#"
           className={classes.btn}

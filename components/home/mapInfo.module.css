@@ -8,11 +8,13 @@
 
 .info h3 {
   font-size: 28px;
-  color: var(--light-background);
+  color: var(--dark-medium-color);
 }
 
 .info p {
-  color: var(--light-border);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--gray-color);
 }
 
 @media only screen and (min-width: 1150px) {

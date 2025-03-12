@@ -1,8 +1,8 @@
 .header {
   color: var(--light-color);
   background-color: var(--dark-background);
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 28px;
+  padding-bottom: 16px;
   transition: all 0.3s;
 }
 
@@ -26,7 +26,6 @@
   }
 
   .hidden {
-    /* transform: translateY(-100%); */
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -35,11 +34,14 @@
   .visible {
     opacity: 1;
     visibility: visible;
-    /* transform: translateY(0); */
   }
 }
 
 @media only screen and (max-width: 1150px) {
+  .header {
+    padding-top: 16px;
+  }
+
   .header > span {
     display: none;
   }

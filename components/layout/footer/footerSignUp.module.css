@@ -28,7 +28,7 @@
 
 .input,
 .input input {
-  background-color: var(--light-border);
+  background-color: var(--dark-soft-color);
 }
 
 .input input {
@@ -44,10 +44,6 @@
   width: 120px;
   height: 40px;
   background-color: var(--dark-color);
-}
-
-.dropdowns {
-  color: var(--light-color);
 }
 
 @media only screen and (max-width: 768px) {

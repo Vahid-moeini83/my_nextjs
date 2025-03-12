@@ -1,7 +1,7 @@
 .link {
   transition: all 0.3s;
   padding-bottom: 2px;
-  border-bottom: 1px solid var(--light-border);
+  border-bottom: 1px solid var(--gray-medium-color);
 }
 
 .link:hover {

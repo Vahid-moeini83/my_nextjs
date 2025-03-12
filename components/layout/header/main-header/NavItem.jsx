@@ -3,9 +3,10 @@
 import Link from "next/link";
 import classes from "./navItem.module.css";
 import SubList from "./SubList";
+import ToggleListIcon from "@/components/ui/ToggleListIcon";
 import useWindowWidth from "@/hooks/useWindowWidth";
-import { HiChevronDown, HiMinus, HiPlus } from "react-icons/hi2";
 import { useState } from "react";
+import { HiChevronDown } from "react-icons/hi2";
 
 function NavItem({ title, subList }) {
   const windowWidth = useWindowWidth();
@@ -20,13 +21,11 @@ function NavItem({ title, subList }) {
       <Link href="#">
         <span>{title}</span>
         {windowWidth < 1150 && title !== "Buy now" && (
-          <>
-            {isOpen ? (
-              <HiMinus onClick={handleToggleSubList} size={16} />
-            ) : (
-              <HiPlus onClick={handleToggleSubList} size={16} />
-            )}
-          </>
+          <ToggleListIcon
+            isOpen={isOpen}
+            onToggle={handleToggleSubList}
+            color="dark"
+          />
         )}
         {windowWidth > 1150 && title !== "Buy now" && (
           <HiChevronDown size={16} />

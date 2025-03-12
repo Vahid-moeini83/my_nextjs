@@ -1,7 +1,7 @@
 .input {
   width: 100%;
-  padding: 12px 96px 12px 12px;
-  font-size: 16px;
+  padding: 14px 96px 14px 16px;
+  font-size: 14px;
   border-radius: var(--rounded-md);
 }
 
@@ -12,13 +12,13 @@
 }
 
 .submit {
-  top: 3px;
+  top: 5px;
   right: 4px;
-  width: 54px;
+  width: 80px;
   height: 36px;
   padding: 4px 8px;
   border-radius: var(--rounded-md);
-  background-color: var(--dark-background);
+  background-color: var(--dark-medium-color);
 }
 
 .close {

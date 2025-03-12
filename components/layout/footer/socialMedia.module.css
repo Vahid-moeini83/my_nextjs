@@ -11,5 +11,5 @@
   align-items: center;
   justify-content: center;
   border-radius: var(--rounded-full);
-  border: 1px solid var(--light-border);
+  border: 1px solid var(--gray-medium-color);
 }

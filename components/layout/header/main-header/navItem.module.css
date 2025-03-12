@@ -41,7 +41,7 @@
 
   .item:not(:last-child) {
     border-bottom: 1px solid var(--light-border);
-    padding-bottom: 12px;
+    padding-bottom: 6px;
   }
 
   .item a {
