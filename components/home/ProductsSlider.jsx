@@ -17,15 +17,7 @@ function ProductsSlider({
   return (
     <Swiper
       modules={[Pagination, ...(navigation ? [Navigation] : [])]}
-      slidesPerView={
-        windowWidth > 1150
-          ? 4
-          : windowWidth > 768
-          ? 3
-          : windowWidth > 480
-          ? 2
-          : 1
-      }
+      slidesPerView={windowWidth > 1150 ? 4 : windowWidth > 768 ? 3 : 2}
       spaceBetween={windowWidth > 1150 ? 32 : 16}
       navigation={
         navigation

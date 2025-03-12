@@ -81,6 +81,23 @@ input[type="search"]::-webkit-search-cancel-button {
   padding: var(--container-padding-lg);
 }
 
+.slide-top {
+  animation: slide-top 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22) both;
+}
+
+.slide-down {
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both;
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
 .no-scroll {
   overflow: hidden;
 }

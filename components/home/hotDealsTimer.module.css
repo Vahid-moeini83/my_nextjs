@@ -6,8 +6,8 @@
   font-weight: 500;
   font-size: 20px;
   color: var(--danger-color);
-  border-radius: var(--rounded-md);
-  background-color: color-mix(in srgb, var(--danger-color) 10%, transparent);
+  border-radius: var(--rounded-sm);
+  background-color: color-mix(in srgb, var(--danger-color) 5%, transparent);
 }
 
 @media only screen and (max-width: 768px) {

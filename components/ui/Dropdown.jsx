@@ -3,32 +3,70 @@
 import classes from "./dropdown.module.css";
 import FlagIcon from "../layout/header/top-header/FlagIcon";
 import useWindowWidth from "@/hooks/useWindowWidth";
-import { useState } from "react";
+import { forwardRef, useState } from "react";
 import { Select, MenuItem } from "@mui/material";
 import { countries, languages } from "@/utils/data";
 import { IoClose } from "react-icons/io5";
 import { HiChevronDown, HiChevronUp } from "react-icons/hi2";
+import { createPortal } from "react-dom";
+import Overlay from "./Overlay";
 
-function CustomDropdownIcon(props) {
-  return <HiChevronDown {...props} size={14} className={classes.selectIcon} />;
-}
+const CustomDropdownIcon = forwardRef(function CustomDropdownIcon(props, ref) {
+  const { open, className, ...rest } = props;
+
+  return (
+    <span ref={ref} {...rest} className={`${className} ${classes.selectIcon}`}>
+      {open ? <HiChevronUp size={14} /> : <HiChevronDown size={14} />}
+      {open && createPortal(<Overlay onClose={null} />, document.body)}
+    </span>
+  );
+});
 
 export default function Dropdown({ render, place }) {
   const [select, setSelect] = useState(render === "countryUnit" ? "usa" : "en");
+  const [open, setOpen] = useState(false);
   const windowWidth = useWindowWidth();
 
-  // const customDropdownIcon = ({ className, classes }) => {
-  //   return <HiChevronDown size={14} className={classes.selectIcon} />;
-  // };
+  const selectBoxStyles = {
+    fontSize: "14px",
+    width: "100px",
+    height: "20px",
+    color: `${
+      place === "footer" ? "var(--gray-medium-color)" : "var(--dark-color)"
+    }`,
+    ".MuiSelect-icon": {
+      color:
+        place === "footer" ? "var(--gray-medium-color)" : "var(--dark-color)",
+    },
+    "& fieldset": { border: "none" },
+  };
 
-  // Fix color in footer and dropdown behavior with custom icon
+  const baseMenuProps = {
+    PaperProps: {
+      sx: {
+        "& .MuiMenuItem-root": {
+          fontSize: "14px",
+          "&.hover": {
+            backgroundColor: "unset !important",
+          },
+          "&.Mui-selected": {
+            backgroundColor: "unset !important",
+            color: "var(--purple-color)",
+          },
+        },
+      },
+    },
+  };
 
   let menuProps;
 
   if (windowWidth >= 1150) {
     menuProps = {
+      ...baseMenuProps,
       PaperProps: {
+        ...baseMenuProps.PaperProps,
         sx: {
+          ...baseMenuProps.PaperProps.sx,
           mt: 1.5,
           borderRadius: 0,
           overflow: "visible",
@@ -36,10 +74,14 @@ export default function Dropdown({ render, place }) {
       },
     };
   }
+
   if (windowWidth >= 768 && windowWidth < 1150) {
     menuProps = {
+      ...baseMenuProps,
       PaperProps: {
+        ...baseMenuProps.PaperProps,
         sx: {
+          ...baseMenuProps.PaperProps.sx,
           borderRadius: 0,
           overflow: "visible",
         },
@@ -52,18 +94,37 @@ export default function Dropdown({ render, place }) {
       },
     };
   }
+
   if (windowWidth < 768) {
     menuProps = {
+      ...baseMenuProps,
       PaperProps: {
+        ...baseMenuProps.PaperProps,
         sx: {
+          ...baseMenuProps.PaperProps.sx,
+          position: "fixed",
+          top: "unset !important",
+          left: "10px",
+          right: "10px",
+          bottom: "-84px",
           width: "100%",
-          borderRadius: "var(--rounded-sm)",
+          borderRadius: "var(--rounded-xs)",
           overflow: "hidden",
           zIndex: 999,
+        },
+        className: open ? "slide-top" : "slide-down",
+      },
+      BackdropProps: {
+        sx: {
+          backgroundColor: "var(--dark-color)",
+          opacity: "0.5 !important",
         },
       },
     };
   }
+
+  const renderValue =
+    render === "countryUnit" ? handleRenderCountry : handleRenderLanguage;
 
   function handleRenderCountry(selected) {
     if (!selected) return;
@@ -100,26 +161,11 @@ export default function Dropdown({ render, place }) {
   return (
     <Select
       value={select}
-      renderValue={
-        render === "countryUnit" ? handleRenderCountry : handleRenderLanguage
-      }
-      sx={{
-        fontSize: "14px",
-        position: "relative",
-        width: "100px",
-        height: "20px",
-        color: `${
-          place === "footer" ? "var(--gray-medium-color)" : "var(--dark-color)"
-        }`,
-        ".MuiSelect-icon": {
-          color:
-            place === "footer"
-              ? "var(--gray-medium-color)"
-              : "var(--dark-color)",
-        },
-        "& fieldset": { border: "none" },
-      }}
+      sx={selectBoxStyles}
       MenuProps={menuProps}
+      renderValue={renderValue}
+      onOpen={() => setOpen(true)}
+      onClose={() => setOpen(false)}
       onChange={(e) => setSelect(e.target.value)}
       displayEmpty
       IconComponent={CustomDropdownIcon}
