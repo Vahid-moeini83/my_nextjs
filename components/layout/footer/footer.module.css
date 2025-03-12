@@ -27,8 +27,8 @@
 
 @media only screen and (max-width: 1150px) {
   .footer {
-    padding-top: 20px;
-    padding-bottom: 86px;
+    padding-top: 20px !important;
+    padding-bottom: 86px !important;
   }
 }
 
