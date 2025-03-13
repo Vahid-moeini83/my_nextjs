@@ -6,7 +6,7 @@
 
 .value {
   font-size: 28px;
-  color: var(--light-background);
+  color: var(--dark-medium-color);
 }
 
 .final {
@@ -17,7 +17,7 @@
 .real {
   font-size: 20px;
   text-decoration: line-through;
-  color: var(--light-border);
+  color: var(--gray-color);
 }
 
 .discount {

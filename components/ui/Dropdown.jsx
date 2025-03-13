@@ -8,8 +8,6 @@ import { Select, MenuItem } from "@mui/material";
 import { countries, languages } from "@/utils/data";
 import { IoClose } from "react-icons/io5";
 import { HiChevronDown, HiChevronUp } from "react-icons/hi2";
-import { createPortal } from "react-dom";
-import Overlay from "./Overlay";
 
 const CustomDropdownIcon = forwardRef(function CustomDropdownIcon(props, ref) {
   const { open, className, ...rest } = props;
@@ -17,7 +15,6 @@ const CustomDropdownIcon = forwardRef(function CustomDropdownIcon(props, ref) {
   return (
     <span ref={ref} {...rest} className={`${className} ${classes.selectIcon}`}>
       {open ? <HiChevronUp size={14} /> : <HiChevronDown size={14} />}
-      {open && createPortal(<Overlay onClose={null} />, document.body)}
     </span>
   );
 });
@@ -26,6 +23,16 @@ export default function Dropdown({ render, place }) {
   const [select, setSelect] = useState(render === "countryUnit" ? "usa" : "en");
   const [open, setOpen] = useState(false);
   const windowWidth = useWindowWidth();
+
+  function handleOpen() {
+    setOpen(true);
+  }
+
+  function handleClose() {
+    setTimeout(() => {
+      setOpen(false);
+    }, 1000);
+  }
 
   const selectBoxStyles = {
     fontSize: "14px",
@@ -102,15 +109,14 @@ export default function Dropdown({ render, place }) {
         ...baseMenuProps.PaperProps,
         sx: {
           ...baseMenuProps.PaperProps.sx,
+          zIndex: 999,
           position: "fixed",
           top: "unset !important",
-          left: "10px",
+          left: "10px !important",
           right: "10px",
-          bottom: "-84px",
+          bottom: "-92px",
           width: "100%",
           borderRadius: "var(--rounded-xs)",
-          overflow: "hidden",
-          zIndex: 999,
         },
         className: open ? "slide-top" : "slide-down",
       },
@@ -164,8 +170,8 @@ export default function Dropdown({ render, place }) {
       sx={selectBoxStyles}
       MenuProps={menuProps}
       renderValue={renderValue}
-      onOpen={() => setOpen(true)}
-      onClose={() => setOpen(false)}
+      onOpen={handleOpen}
+      onClose={handleClose}
       onChange={(e) => setSelect(e.target.value)}
       displayEmpty
       IconComponent={CustomDropdownIcon}

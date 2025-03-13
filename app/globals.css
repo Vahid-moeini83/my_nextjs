@@ -82,11 +82,11 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 .slide-top {
-  animation: slide-top 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22) both;
+  animation: slide-top 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) both;
 }
 
 .slide-down {
-  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both;
+  animation: slide-top 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) reverse both;
 }
 
 @keyframes slide-top {
@@ -95,6 +95,21 @@ input[type="search"]::-webkit-search-cancel-button {
   }
   100% {
     transform: translateY(-100px);
+  }
+}
+
+.rotate-forward {
+  animation: rotate-forward 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes rotate-forward {
+  0% {
+    transform: translateZ(-200px) rotate(45deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0) rotate(0);
+    opacity: 1;
   }
 }
 
