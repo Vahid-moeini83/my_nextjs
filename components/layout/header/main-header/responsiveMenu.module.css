@@ -8,7 +8,7 @@
   height: 64px;
   padding: 10px;
   color: var(--dark-color);
-  box-shadow: var(--shadow-light);
+  box-shadow: var(--shadow-dark);
   background-color: var(--light-color);
 }
 

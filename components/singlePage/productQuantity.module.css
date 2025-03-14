@@ -5,7 +5,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   border-radius: var(--rounded-xs);
   background-color: var(--gray-background);
+}
+
+@media only screen and (max-width: 480px) {
+  .quantity {
+    padding: 8px;
+  }
 }

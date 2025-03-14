@@ -5,6 +5,10 @@
   background-color: var(--dark-color);
 }
 
+.padding {
+  padding-bottom: 120px !important;
+}
+
 .footer h3 {
   color: var(--light-color);
   margin-bottom: 44px;
@@ -29,6 +33,10 @@
   .footer {
     padding-top: 20px !important;
     padding-bottom: 86px !important;
+  }
+
+  .padding {
+    padding-bottom: 220px !important;
   }
 }
 

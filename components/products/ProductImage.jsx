@@ -1,10 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import classes from "./productImage.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import useWindowWidth from "@/hooks/useWindowWidth";
-import { useState } from "react";
 import ProductDiscount from "./ProductDiscount";
 
 function ProductImage({ images, to, alt, discount, isInGrid, gridValue }) {

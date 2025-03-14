@@ -14,7 +14,7 @@
   background-color: var(--light-background);
   margin: 24px 0;
 }
-
+/* 
 @media only screen and (min-width: 1150px) {
   .sticky {
     width: 100%;
@@ -23,19 +23,18 @@
     top: 0;
     left: 0;
     right: 0;
+    transition: all 0.3s;
   }
 
   .hidden {
-    opacity: 0;
-    visibility: hidden;
+    top: -190px;
     pointer-events: none;
   }
 
   .visible {
-    opacity: 1;
-    visibility: visible;
+    top: 0;
   }
-}
+} */
 
 @media only screen and (max-width: 1150px) {
   .header {

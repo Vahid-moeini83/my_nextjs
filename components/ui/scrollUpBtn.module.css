@@ -4,17 +4,18 @@
   height: 36px;
   z-index: 998;
   position: fixed;
-  bottom: 100px;
+  bottom: 110px;
   right: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--rounded-xs);
-  box-shadow: var(--shadow-light);
-  background-color: var(--light-color);
-  transition: all 0.4s;
-  visibility: hidden;
   opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+  box-shadow: var(--shadow-dark);
+  border-radius: var(--rounded-xs);
+  border: 1px solid var(--dark-color);
+  background-color: var(--light-color);
 }
 
 .show {

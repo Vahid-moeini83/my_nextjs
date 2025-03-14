@@ -1,4 +1,5 @@
 import classes from "./productBuyPrice.module.css";
+import ShopBtn from "./ShopBtn";
 import CustomTooltip from "../ui/CustomTooltip";
 import { formatPrice } from "@/utils/helpers";
 import { FaRegHeart } from "react-icons/fa";
@@ -8,9 +9,9 @@ function ProductBuyPrice({ quantity, finalPrice }) {
   return (
     <div className={classes.box}>
       <div className={classes.top}>
-        <button className={classes.add}>
+        <ShopBtn color="var(--light-color)" background="var(--dark-color)">
           Add to cart - {formatPrice(finalPrice * quantity)}
-        </button>
+        </ShopBtn>
         <div className={classes.icons}>
           <CustomTooltip title="Add to wishlist" placement="top">
             <div className={classes.icon}>
@@ -24,7 +25,9 @@ function ProductBuyPrice({ quantity, finalPrice }) {
           </CustomTooltip>
         </div>
       </div>
-      <button className={classes.buy}>BUY IT NOW</button>
+      <ShopBtn color="var(--light-color)" background="var(--purple-color)">
+        BUY IT NOW
+      </ShopBtn>
     </div>
   );
 }

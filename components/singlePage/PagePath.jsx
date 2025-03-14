@@ -6,7 +6,7 @@ function PagePath({ productName }) {
   return (
     <div className={classes.path}>
       <Link href="/">Home</Link>
-      <HiChevronRight size={14} />
+      <HiChevronRight size={12} />
       <span>{productName}</span>
     </div>
   );

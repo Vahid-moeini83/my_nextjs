@@ -7,7 +7,7 @@ import ProductServices from "./ProductServices";
 import ServicesDescription from "./ServicesDescription";
 import ProductGuarantee from "./ProductGuarantee";
 
-function ProductDetails({ name, price, discount, colors }) {
+function ProductDetails({ name, image, price, discount, colors }) {
   const finalPrice = discount !== 0 && price - price * (discount / 100);
 
   return (
@@ -15,7 +15,12 @@ function ProductDetails({ name, price, discount, colors }) {
       <ProductName name={name} />
       <ProductValue price={price} discount={discount} finalPrice={finalPrice} />
       <ProductColors colors={colors} hasText={true} />
-      <ProductAddToCart finalPrice={finalPrice} />
+      <ProductAddToCart
+        name={name}
+        image={image}
+        finalPrice={finalPrice}
+        colors={colors}
+      />
       <ProductServices />
       <ServicesDescription />
       <ProductGuarantee />

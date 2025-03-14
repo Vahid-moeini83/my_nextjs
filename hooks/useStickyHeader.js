@@ -1,40 +1,36 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function useStickyHeader(ref) {
-  const [isSticky, setIsSticky] = useState(false);
+  const [isPassed, setIsPassed] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [headerHeight, setHeaderHeight] = useState();
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
-    if (!ref.current) return;
-
-    setHeaderHeight(ref.current.offsetHeight);
-
     function handleScroll() {
-      if (!ref.current) return;
+      if (ref.current) {
+        const { bottom } = ref.current.getBoundingClientRect();
 
-      const mainHeaderOffset = ref.current.offsetTop;
-      const mainHeaderHeight = ref.current.offsetHeight;
+        if (bottom <= 0) {
+          setIsPassed(true);
 
-      if (window.scrollY > mainHeaderOffset + mainHeaderHeight + 10) {
-        setIsSticky(true);
-
-        if (window.scrollY > lastScrollY + 5) {
-          setIsVisible(false);
-        } else if (window.scrollY < lastScrollY - 5) {
-          setIsVisible(true);
+          if (window.scrollY > lastScrollY.current) {
+            setIsVisible(false);
+          } else if (window.scrollY < lastScrollY.current) {
+            setIsVisible(true);
+          }
+        } else {
+          setIsPassed(false);
         }
-      } else {
-        setIsSticky(false);
       }
 
-      setLastScrollY(window.scrollY);
+      lastScrollY.current = window.scrollY;
     }
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY, ref]);
+    handleScroll();
 
-  return { isSticky, isVisible, headerHeight };
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [ref]);
+
+  return { isPassed, isVisible };
 }

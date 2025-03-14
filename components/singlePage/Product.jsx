@@ -8,6 +8,7 @@ function Product({ image, name, price, discount, colors }) {
       <div className={classes.product}>
         <ProductImages images={image} />
         <ProductDetails
+          image={image}
           name={name}
           price={price}
           discount={discount}
