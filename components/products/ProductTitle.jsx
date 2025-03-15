@@ -1,10 +1,20 @@
 import Link from "next/link";
 import classes from "./productTitle.module.css";
 
-function ProductTitle({ title, to }) {
+function ProductTitle({ title, to, gridValue }) {
+  const hasFullWidth = gridValue === "grid-1";
+
+  console.log(hasFullWidth);
+
   return (
     <Link href={to}>
-      <h4 className={classes.title}>{title}</h4>
+      <h4
+        className={`${classes.title} ${
+          hasFullWidth ? classes.bigTitle : classes.smallTitle
+        }`}
+      >
+        {title}
+      </h4>
     </Link>
   );
 }

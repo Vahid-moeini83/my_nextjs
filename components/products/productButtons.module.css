@@ -3,34 +3,21 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
+}
+
+.normalShow {
+  visibility: visible;
   position: absolute;
-  right: 0;
-  left: 0;
-  top: 62%;
-}
-
-.fullWidth {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.space {
-  top: 58%;
+  bottom: 5px;
 }
 
 .button {
   width: 40px;
   height: 40px;
   cursor: pointer;
-  transition: all 0.3s;
-  transform: translateY(0);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: var(--shadow-dark);
   border-radius: var(--rounded-xs);
   background-color: var(--light-color);
 }
@@ -40,7 +27,57 @@
   background-color: var(--dark-color);
 }
 
+.primary {
+  transition: all 0.2s;
+  box-shadow: var(--shadow-dark);
+}
+
+.secondary {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--light-border);
+}
+
+@media only screen and (min-width: 1150px) {
+  .normalWidth {
+    visibility: hidden;
+    position: absolute;
+    bottom: 5px;
+  }
+
+  @keyframes slide-top {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .bag {
+    animation: slide-top 0.3s ease 0.05s both;
+  }
+
+  .heart {
+    animation: slide-top 0.3s ease 0.2s both;
+  }
+
+  .compare {
+    animation: slide-top 0.3s ease 0.35s both;
+  }
+
+  .eye {
+    animation: slide-top 0.3s ease 0.5s both;
+  }
+}
+
 @media only screen and (max-width: 1150px) {
+  .normalWidth {
+    visibility: visible;
+    position: absolute;
+    bottom: 5px;
+  }
+
   .small {
     width: 32px;
     height: 32px;
@@ -53,22 +90,9 @@
   }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 768px) {
-  .wrapper {
-    top: 60%;
-  }
-
-  .space {
-    top: 54%;
-  }
-}
-
 @media only screen and (max-width: 480px) {
-  .wrapper {
-    top: 58%;
-  }
-
-  .space {
-    top: 50%;
+  .secondary {
+    width: 28px;
+    height: 28px;
   }
 }

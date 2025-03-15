@@ -1,22 +1,40 @@
+@keyframes fade {
+  0% {
+    transform: scale(1) translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.1) translateZ(0);
+    opacity: 1;
+  }
+}
+
 .box {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  max-height: 320px;
   margin-bottom: 14px;
   border-radius: var(--rounded-xs);
 }
 
+.longHeight {
+  max-height: 450px;
+}
+
+.shortHeight {
+  max-height: 320px;
+}
+
 .fullWidth {
-  width: 440px;
-  max-height: 400px;
+  width: 360px;
+  max-height: 420px;
   overflow: hidden;
   position: relative;
 }
 
 .image {
-  transition: all 1s;
+  object-fit: cover;
 }
 
 .size {
@@ -24,21 +42,26 @@
   height: 100% !important;
 }
 
-.height {
-  max-height: 440px !important;
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1150px) {
+  .longHeight {
+    max-height: 400px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
   .box:hover .image {
-    transform: scale(1.1);
+    transition: all 0.3s;
+    animation: fade 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   }
 
   .fullWidth:hover .image {
-    transform: scale(1.1);
-  }
-
-  .height {
-    max-height: 400px;
+    transition: all 0.3s;
+    animation: fade 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   }
 }
 
@@ -60,7 +83,7 @@
   }
 
   .fullWidth {
-    width: 180px;
-    height: 180px;
+    width: 140px;
+    height: 140px;
   }
 }

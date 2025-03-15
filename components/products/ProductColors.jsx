@@ -16,10 +16,11 @@ const BootstrapTooltip = styled(({ className, ...props }) => (
   },
 }));
 
-function ProductColors({ colors, hasText }) {
+function ProductColors({ gridValue, colors, hasText }) {
   if (!colors.length) return;
 
   const [activeColor, setActiveColor] = useState(colors[0]);
+  const hasFullWidth = gridValue === "grid-1";
 
   function handleActiveColor(color) {
     setActiveColor(color);
@@ -32,7 +33,11 @@ function ProductColors({ colors, hasText }) {
           Color: <span>{activeColor}</span>
         </span>
       )}
-      <div className={classes.buttons}>
+      <div
+        className={`${classes.buttons} ${
+          hasFullWidth ? classes.fullWidth : classes.normalWidth
+        }`}
+      >
         {colors.map((color, index) => (
           <BootstrapTooltip key={index} title={color} arrow placement="bottom">
             <button
