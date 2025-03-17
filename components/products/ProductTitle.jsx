@@ -4,8 +4,6 @@ import classes from "./productTitle.module.css";
 function ProductTitle({ title, to, gridValue }) {
   const hasFullWidth = gridValue === "grid-1";
 
-  console.log(hasFullWidth);
-
   return (
     <Link href={to}>
       <h4

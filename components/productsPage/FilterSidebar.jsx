@@ -4,18 +4,39 @@ import classes from "./filterSidebar.module.css";
 import { IoClose } from "react-icons/io5";
 import { CiFilter } from "react-icons/ci";
 import { Slider } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 function FilterSidebar({ isOpen, onClose, updateFilter }) {
-  const [range, setRange] = useState([0, 200]);
+  const searchParams = useSearchParams();
+  const minPriceValue = searchParams.get("min_price");
+  const maxPriceValue = searchParams.get("max_price");
+  const [range, setRange] = useState([
+    minPriceValue ? Number(minPriceValue) : 0,
+    maxPriceValue ? Number(maxPriceValue) : 200,
+  ]);
 
-  function handleChangeRange(e, newValue) {
-    if (newValue[1] - newValue[0] >= 5) {
-      setRange(newValue);
+  useEffect(() => {
+    if (minPriceValue && maxPriceValue)
+      setRange([Number(minPriceValue), Number(maxPriceValue)]);
+  }, [minPriceValue, maxPriceValue]);
+
+  let timer;
+
+  function updateWithDelay(newValue) {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
       updateFilter({
         min_price: String(newValue[0]),
         max_price: String(newValue[1]),
       });
+    }, 2000);
+  }
+
+  function handleChangeRange(e, newValue) {
+    if (newValue[1] - newValue[0] >= 5) {
+      setRange(newValue);
+      updateWithDelay(newValue);
     }
   }
 

@@ -91,10 +91,10 @@ input[type="search"]::-webkit-search-cancel-button {
 
 @keyframes slide-top {
   0% {
-    transform: translateY(0);
+    transform: translateY(100%);
   }
   100% {
-    transform: translateY(-100px);
+    transform: translateY(0);
   }
 }
 

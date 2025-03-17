@@ -21,6 +21,10 @@
   bottom: -120px;
 }
 
+.image img {
+  object-fit: cover;
+}
+
 .product {
   display: flex;
   align-items: center;

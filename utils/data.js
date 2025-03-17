@@ -113,3 +113,12 @@ export const comments = [
       "Ergonomic and responsive, this game controller provides precise controls and a comfortable grip, perfect for long gaming sessions.",
   },
 ];
+
+export const sortOptions = [
+  { value: "featured", title: "Featured" },
+  { value: "bestSelling", title: "Best selling" },
+  { value: "alphabetical-asc", title: "Alphabetically A-Z" },
+  { value: "alphabetical-dec", title: "Alphabetically Z-A" },
+  { value: "price-asc", title: "Price, low to high" },
+  { value: "price-dec", title: "Price, high to low" },
+];

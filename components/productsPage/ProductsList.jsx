@@ -9,13 +9,18 @@ function ProductsList({ products, gridValue }) {
     <div className={classes.section}>
       <div className="container">
         <div className={`${classes.grid} ${classes[gridValue]}`}>
-          {products.map((product) => (
-            <ProductCard
+          {products.map((product, index) => (
+            <div
+              className={classes.card}
+              style={{ animationDelay: `${index * 0.1}s` }}
               key={product.id}
-              product={product}
-              isInGrid={true}
-              gridValue={gridValue}
-            />
+            >
+              <ProductCard
+                isInGrid={true}
+                product={product}
+                gridValue={gridValue}
+              />
+            </div>
           ))}
         </div>
       </div>

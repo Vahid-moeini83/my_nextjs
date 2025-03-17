@@ -1,3 +1,14 @@
+@keyframes slide-top {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .section {
   padding-bottom: 20px;
 }
@@ -15,6 +26,10 @@
   display: grid;
   column-gap: 4px;
   width: 100%;
+}
+
+.card {
+  animation: slide-top 0.2s ease both;
 }
 
 .grid-6 {

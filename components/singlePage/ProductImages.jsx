@@ -42,17 +42,21 @@ function ProductImages({ images }) {
     <>
       <div className={classes.wrapper}>
         <ul className={classes.images}>
-          {images.map((image, index) => (
-            <li
-              className={`${
-                activeImage === index ? classes.active : classes.inactive
-              }`}
-              onClick={() => handleActiveImage(index)}
-              key={index}
-            >
-              <Image src={image} fill alt={`Image ${index}`} />
-            </li>
-          ))}
+          {images.map((image, index) => {
+            const imageClassName = classes[`images-${index + 1}`];
+
+            return (
+              <li
+                className={`${
+                  activeImage === index ? classes.active : classes.inactive
+                } ${imageClassName}`}
+                onClick={() => handleActiveImage(index)}
+                key={index}
+              >
+                <Image src={image} fill alt={`Image ${index}`} />
+              </li>
+            );
+          })}
         </ul>
         <Swiper
           modules={[Navigation]}

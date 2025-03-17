@@ -1,3 +1,14 @@
+@keyframes rotate-forward {
+  0% {
+    transform: translateZ(-200px) rotate(45deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0) rotate(0);
+    opacity: 1;
+  }
+}
+
 .wrapper {
   width: 50%;
   display: flex;
@@ -16,6 +27,28 @@
   width: 80px;
   height: 80px;
   padding: 4px;
+}
+
+.images-1,
+.images-2,
+.images-3 {
+  animation: rotate-forward 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.images-1 {
+  animation-delay: 0.2s;
+}
+
+.images-2 {
+  animation-delay: 0.6s;
+}
+
+.images-3 {
+  animation-delay: 1s;
+}
+
+.images li img {
+  object-fit: cover;
 }
 
 .inactive {
@@ -44,6 +77,10 @@
   position: relative;
   width: 540px;
   height: 540px;
+}
+
+.image img {
+  object-fit: cover;
 }
 
 .zoomedImage {

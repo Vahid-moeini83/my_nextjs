@@ -8,7 +8,7 @@ import ServicesDescription from "./ServicesDescription";
 import ProductGuarantee from "./ProductGuarantee";
 
 function ProductDetails({ name, image, price, discount, colors }) {
-  const finalPrice = discount !== 0 && price - price * (discount / 100);
+  const finalPrice = discount !== 0 ? price - price * (discount / 100) : price;
 
   return (
     <div className={classes.details}>
