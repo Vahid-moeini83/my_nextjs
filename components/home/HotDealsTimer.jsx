@@ -43,7 +43,14 @@ function HotDealsTimer({ targetDate }) {
   return (
     <div className={classes.timer}>
       <FaRegClock size={24} />
-      <span>{`${timeLeft.days}D : ${timeLeft.hours}H : ${timeLeft.minutes}M : ${timeLeft.seconds}S`}</span>
+      <div>
+        <span key={`day-${timeLeft.days}`}>{timeLeft.days}D : </span>
+        <span key={`hour-${timeLeft.hours}`}>{timeLeft.hours}H : </span>
+        <span key={`minutes-${timeLeft.minutes}`}>{timeLeft.minutes}M : </span>
+        <span key={`seconds-${timeLeft.seconds}`} className={classes.fade}>
+          {timeLeft.seconds}S
+        </span>
+      </div>
     </div>
   );
 }

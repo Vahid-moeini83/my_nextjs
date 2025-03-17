@@ -95,13 +95,17 @@ function ProductsSort({ updateFilter }) {
   return (
     <div className={classes.sort}>
       <Select
-        value={windowWidth >= 768 ? (sortType ? sortType : select) : ""}
+        value={windowWidth > 768 && (sortType || select)}
         renderValue={windowWidth < 768 && (() => "Sort")}
         onChange={(e) => handleUpdateFilter(e)}
         onOpen={handleOpen}
         onClose={handleClose}
         className={classes.select}
         MenuProps={menuProps}
+        sx={{
+          fontSize: "14px",
+        }}
+        displayEmpty
       >
         {sortOptions.map((option) => (
           <MenuItem value={option.value} key={option.value}>

@@ -1,36 +1,33 @@
-import { useEffect, useRef, useState } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
 export function useStickyHeader(ref) {
-  const [isPassed, setIsPassed] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
-  const lastScrollY = useRef(0);
+  const [isPassed, setIsPassed] = useState(false);
+  const prevScrollY = useRef(0);
+  const ticking = useRef(false);
 
-  useEffect(() => {
-    function handleScroll() {
-      if (ref.current) {
-        const { bottom } = ref.current.getBoundingClientRect();
+  const handleScroll = useCallback(() => {
+    if (!ref.current) return;
 
-        if (bottom <= 0) {
-          setIsPassed(true);
+    if (!ticking.current) {
+      requestAnimationFrame(() => {
+        const currentScrollY = window.scrollY;
+        setIsPassed(currentScrollY > 100);
+        setIsVisible(
+          prevScrollY.current > currentScrollY || currentScrollY < 100
+        );
+        prevScrollY.current = currentScrollY;
+        ticking.current = false;
+      });
 
-          if (window.scrollY > lastScrollY.current) {
-            setIsVisible(false);
-          } else if (window.scrollY < lastScrollY.current) {
-            setIsVisible(true);
-          }
-        } else {
-          setIsPassed(false);
-        }
-      }
-
-      lastScrollY.current = window.scrollY;
+      ticking.current = true;
     }
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-
-    return () => window.removeEventListener("scroll", handleScroll);
   }, [ref]);
 
-  return { isPassed, isVisible };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
+
+  return { isVisible, isPassed };
 }

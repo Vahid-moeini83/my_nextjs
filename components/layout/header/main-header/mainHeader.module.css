@@ -3,7 +3,7 @@
   background-color: var(--dark-background);
   padding-top: 28px;
   padding-bottom: 16px;
-  transition: all 0.3s;
+  transition: transform 0.3s ease-in-out;
 }
 
 .header > span {
@@ -14,7 +14,7 @@
   background-color: var(--light-background);
   margin: 24px 0;
 }
-/* 
+
 @media only screen and (min-width: 1150px) {
   .sticky {
     width: 100%;
@@ -23,18 +23,17 @@
     top: 0;
     left: 0;
     right: 0;
-    transition: all 0.3s;
   }
 
   .hidden {
-    top: -190px;
+    transform: translateY(-190px);
     pointer-events: none;
   }
 
   .visible {
-    top: 0;
+    transform: translateY(0);
   }
-} */
+}
 
 @media only screen and (max-width: 1150px) {
   .header {

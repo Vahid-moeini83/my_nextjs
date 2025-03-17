@@ -13,20 +13,18 @@ function MainHeader() {
   const { isVisible, isPassed } = useStickyHeader(headerRef);
 
   return (
-    <>
-      <div
-        ref={headerRef}
-        className={`${classes.header} ${isPassed ? classes.sticky : ""} ${
-          isVisible ? classes.visible : classes.hidden
-        }`}
-      >
-        <MainHeaderTop />
-        <span></span>
-        <MainHeaderBelow />
-        <ResponsiveHeader />
-        <ResponsiveMenu />
-      </div>
-    </>
+    <div
+      ref={headerRef}
+      className={`${classes.header} ${isPassed ? classes.sticky : ""} ${
+        isVisible ? classes.visible : classes.hidden
+      }`}
+    >
+      <MainHeaderTop />
+      <span></span>
+      <MainHeaderBelow />
+      <ResponsiveHeader />
+      <ResponsiveMenu />
+    </div>
   );
 }
 

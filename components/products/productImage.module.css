@@ -55,12 +55,12 @@
 
 @media only screen and (min-width: 768px) {
   .box:hover .image {
-    transition: all 0.3s;
+    transition: all 0.5s;
     animation: fade 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   }
 
   .fullWidth:hover .image {
-    transition: all 0.3s;
+    transition: all 0.5s;
     animation: fade 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   }
 }
